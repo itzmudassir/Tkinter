@@ -126,6 +126,50 @@ def home():
                                   text_color="#3388FF")
     title1.place(x=440,y=10)
     
+    # Creating a button to decrease the value of the label
+    dec_button = customtkinter.CTkButton(master=app,
+                                            text="Decrease",
+                                            text_color="white",
+                                            hover_color="red",
+                                            fg_color="black",
+                                            corner_radius=15,
+                                            text_font=("System", 15,BOLD),
+                                            )
+    dec_button.place(x=500,y=100)
+    # Creating a label to display the value
+    value_label = customtkinter.CTkLabel(master=app,
+                                         text="0",
+                                         text_font=("System", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="gray",
+                                            corner_radius=8,
+                                            text_color="black",
+                                            width=20,
+                                             )
+                                             
+    value_label.place(x=650,y=100)
+    # Creating a button to increase the value of the label
+    inc_button = customtkinter.CTkButton(master=app,
+                                            text="Increase",
+                                            text_color="white",
+                                            hover_color="green",
+                                            fg_color="black",
+                                            corner_radius=15,
+                                            text_font=("System", 15,BOLD),
+                                            )
+    inc_button.place(x=800,y=100)
+    # Creating a label to display the value
+    value_label_2 = customtkinter.CTkLabel(master=app,
+                                            text="0",
+                                            text_font=("System", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="gray",
+                                            corner_radius=8,
+                                            text_color="black",
+                                            width=20,
+                                            )
+    value_label_2.place(x=950,y=100)
+    
     # Creating the checkbox_1
     checkbox_1 = customtkinter.CTkCheckBox(master=app,
                                            command=checkbox_event_1,
@@ -173,57 +217,7 @@ def home():
                                       corner_radius=20,
                                       text_color="white")
     label_3.place(x=40,y=200)
-    # Creating a button to decrease the value of the label
-    dec_button = customtkinter.CTkButton(master=app,
-                                            text="Decrease",
-                                            text_color="white",
-                                            hover_color="red",
-                                            fg_color="black",
-                                            corner_radius=15,
-                                            text_font=("System", 15,BOLD),
-                                            )
     
-    dec_button.place(x=500,y=100)
-    # Creating a label to display the value
-    value_label = customtkinter.CTkLabel(master=app,
-                                         text="0",
-                                         text_font=("System", 15,BOLD),
-                                            bg_color="white",
-                                            fg_color="gray",
-                                            corner_radius=8,
-                                            text_color="black",
-                                            width=20,
-                                             )
-                                             
-    value_label.place(x=650,y=100)
-    # Creating a button to increase the value of the label
-    inc_button = customtkinter.CTkButton(master=app,
-                                            text="Increase",
-                                            text_color="white",
-                                            hover_color="green",
-                                            fg_color="black",
-                                            corner_radius=15,
-                                            text_font=("System", 15,BOLD),
-                                            )
-    inc_button.place(x=800,y=100)
-    # Creating a label to display the value
-    value_label_2 = customtkinter.CTkLabel(master=app,
-                                            text="0",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="white",
-                                            fg_color="gray",
-                                            corner_radius=8,
-                                            text_color="black",
-                                            width=20,
-                                            )
-    value_label_2.place(x=950,y=100)
-                                        
-    
-
-    
-
-
-
 
 # Creating the Splash Screen
 frame1=customtkinter.CTkFrame(master=app,           # Creating the frame for the splash screen
