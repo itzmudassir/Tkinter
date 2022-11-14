@@ -92,12 +92,32 @@ def checkbox_event_3():
         
 
 # Defining the function for increasing the value of the value label
-def increase_value():
-    return value_label['text'] + 1
 
+def increase_value():
+    global i
+    if i<=99:
+        
+        i = i + 10
+        value_label.configure(text=i)
+    
+# Creating the decrease function to decrease the value of the value label   
+def decrease_value():
+    global i
+    if i>=1:
+        i = i - 10
+        value_label.configure(text=i)
+# Creating Submit Function to Sava data in the file        
+def submit():
+    file = open("i_value.txt","a")
+    file.write(str(i)+"\n")
+    file.close()
+    
         
 # Defining the function for the Home Page        
 def home():
+    global i 
+    i = 0
+    
     global checkbox_1    # Making the checkbox_1 global
     global checkbox_2    # Making the checkbox_2 global
     global checkbox_3    # Making the checkbox_3 global
@@ -117,7 +137,6 @@ def home():
     global dec_button   # Making the dec_button global
     global inc_button   # Making the inc_button global
     global value_label  # Making the value_label global
-    global value_label_2  # Making the value_label_2 global
     
     # Creating the title of the window
     title1=customtkinter.CTkLabel(master=app,
@@ -132,43 +151,37 @@ def home():
                                             text_color="white",
                                             hover_color="red",
                                             fg_color="black",
-                                            corner_radius=15,
+                                            corner_radius=8,
                                             text_font=("System", 15,BOLD),
-                                            )
+                                            command=decrease_value)
+                                            
     dec_button.place(x=500,y=100)
     # Creating a label to display the value
     value_label = customtkinter.CTkLabel(master=app,
                                          text="0",
                                          text_font=("System", 15,BOLD),
-                                            bg_color="white",
-                                            fg_color="gray",
-                                            corner_radius=8,
-                                            text_color="black",
-                                            width=20,
-                                             )
+                                         bg_color="white",
+                                         fg_color="gray",
+                                         corner_radius=8,
+                                         text_color="black",
+                                        #  width=20,
+                                        #  height=10
+                                        )
+                                         
                                              
-    value_label.place(x=650,y=100)
+    value_label.place(x=700,y=125)
     # Creating a button to increase the value of the label
     inc_button = customtkinter.CTkButton(master=app,
                                             text="Increase",
                                             text_color="white",
                                             hover_color="green",
                                             fg_color="black",
-                                            corner_radius=15,
-                                            text_font=("System", 15,BOLD),
-                                            )
-    inc_button.place(x=800,y=100)
-    # Creating a label to display the value
-    value_label_2 = customtkinter.CTkLabel(master=app,
-                                            text="0",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="white",
-                                            fg_color="gray",
                                             corner_radius=8,
-                                            text_color="black",
-                                            width=20,
-                                            )
-    value_label_2.place(x=950,y=100)
+                                            text_font=("System", 15,BOLD),
+                                            command=increase_value)
+                                            
+    inc_button.place(x=500,y=150)
+    
     
     # Creating the checkbox_1
     checkbox_1 = customtkinter.CTkCheckBox(master=app,
@@ -218,7 +231,19 @@ def home():
                                       text_color="white")
     label_3.place(x=40,y=200)
     
+    # Creating the button to Submit the data
+    sub_button = customtkinter.CTkButton(master=app,
+                                            text="Submit",
+                                            text_color="white",
+                                            hover_color="blue",
+                                            fg_color="black",
+                                            corner_radius=8,
+                                            text_font=("System", 15,BOLD),
+                                            command=submit)
+    sub_button.place(x=500,y=200)
+    
 
+    
 # Creating the Splash Screen
 frame1=customtkinter.CTkFrame(master=app,           # Creating the frame for the splash screen
                               width=240,
