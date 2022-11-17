@@ -9,7 +9,6 @@ from tkinter import font
 from turtle import title, width
 import customtkinter
 from PIL import ImageTk,Image
-from matplotlib import image
 from tkinter.font import BOLD
 
 
@@ -57,7 +56,7 @@ def checkbox_event_2():
                                       fg_color="green",
                                       corner_radius=20,
                                       text_color="white")
-        label_2.place(x=40,y=230)
+        label_2.place(x=40,y=260)
     else:
         label_2=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
@@ -66,7 +65,7 @@ def checkbox_event_2():
                                       fg_color="red",
                                       corner_radius=20,
                                       text_color="white")
-        label_2.place(x=40,y=230)
+        label_2.place(x=40,y=260)
 # ********** END OF THIS FUNCTION **********
         
 # Defining the function for the checkbox_3        
@@ -79,7 +78,7 @@ def checkbox_event_3():
                                       fg_color="green",
                                       corner_radius=20,
                                       text_color="white")
-        label_2.place(x=40,y=330)
+        label_2.place(x=40,y=390)
     else:
         label_2=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
@@ -88,7 +87,7 @@ def checkbox_event_3():
                                       fg_color="red",
                                       corner_radius=20,
                                       text_color="white")
-        label_2.place(x=40,y=330)
+        label_2.place(x=40,y=390)
         
 # ********** END OF THIS FUNCTION **********
         
@@ -110,7 +109,7 @@ def decrease_value_1():
 # Function for the first Submit Button       
 def submit_1():
     file = open("i_value_1.txt","a")
-    file.write(str(i)+"\n")
+    file.write(str(var1.get())+": "+str(i)+"\n")
     file.close()
 # ********** END OF First increment/decrement and Submit buttons **********    
     
@@ -133,7 +132,7 @@ def decrease_value_2():
 # Function for the second Submit Button        
 def submit_2():
     file = open("i_value_2.txt","a")
-    file.write(str(j)+"\n")
+    file.write(str(var2.get())+": "+str(j)+"\n")
     file.close()
     
 # ********** END OF Second increment/decrement and Submit buttons **********    
@@ -156,7 +155,7 @@ def decrease_value_3():
 # Function for the third Submit Button       
 def submit_3():
     file = open("i_value_3.txt","a")
-    file.write(str(k)+"\n")
+    file.write(str(var3.get())+": "+str(k)+"\n")
     file.close()
     
 # ********** END OF Third increment/decrement and Submit buttons **********
@@ -209,19 +208,28 @@ def home():
                                   text_color="#3388FF")
     title1.place(x=440,y=10)
     
+    # IMAGE SECTION STARTS HERE
+    
+    # Define our images
+    up_arrow = ImageTk.PhotoImage(Image.open("Elements/up.png").resize((20,20)), Image.ANTIALIAS)
+    down_arrow = ImageTk.PhotoImage(Image.open("Elements/down.png").resize((20,20)), Image.ANTIALIAS)
+    
     
     # FIRST SECTION
     # Creating a first decrease button the value of the label
     dec_button_1 = customtkinter.CTkButton(master=app,
-                                            text="Decrease",
+                                            text="",
+                                            image=down_arrow,
                                             text_color="white",
-                                            hover_color="red",
-                                            fg_color="black",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_font=("System", 15,BOLD),
+                                            #width=200, height=50,
                                             command=decrease_value_1)
                                             
-    dec_button_1.place(x=400,y=100)
+    dec_button_1.place(x=300,y=100)
     # Creating a first label to display the value
     value_label_1 = customtkinter.CTkLabel(master=app,
                                          text="0",
@@ -235,18 +243,20 @@ def home():
                                         )
                                          
                                              
-    value_label_1.place(x=400,y=130)
+    value_label_1.place(x=300,y=130)
     # Creating a first button to increase the value of the label
     inc_button_1 = customtkinter.CTkButton(master=app,
                                             text="Increase",
+                                            image=up_arrow,
+                                            compound="left",
                                             text_color="white",
-                                            hover_color="green",
+                                            hover_color="white",
                                             fg_color="black",
                                             corner_radius=8,
                                             text_font=("System", 15,BOLD),
                                             command=increase_value_1)
                                             
-    inc_button_1.place(x=400,y=160)
+    inc_button_1.place(x=300,y=160)
     
     # Creating the button to first Submit the data
     sub_button_1 = customtkinter.CTkButton(master=app,
@@ -257,7 +267,7 @@ def home():
                                             corner_radius=8,
                                             text_font=("System", 15,BOLD),
                                             command=submit_1)
-    sub_button_1.place(x=550,y=130)
+    sub_button_1.place(x=450,y=130)
     
     # SECOND SECTION
     # Creating a first decrease button the value of the label
@@ -270,7 +280,7 @@ def home():
                                             text_font=("System", 15,BOLD),
                                             command=decrease_value_2)
                                             
-    dec_button_2.place(x=400,y=200)
+    dec_button_2.place(x=300,y=230)
     # Creating a first label to display the value
     value_label_2 = customtkinter.CTkLabel(master=app,
                                          text="0",
@@ -284,7 +294,7 @@ def home():
                                         )
                                          
                                              
-    value_label_2.place(x=400,y=230)
+    value_label_2.place(x=300,y=260)
     # Creating a first button to increase the value of the label
     inc_button_2 = customtkinter.CTkButton(master=app,
                                             text="Increase",
@@ -295,7 +305,7 @@ def home():
                                             text_font=("System", 15,BOLD),
                                             command=increase_value_2)
                                             
-    inc_button_2.place(x=400,y=260)
+    inc_button_2.place(x=300,y=290)
     
     # Creating the button to first Submit the data
     sub_button_2 = customtkinter.CTkButton(master=app,
@@ -306,7 +316,7 @@ def home():
                                             corner_radius=8,
                                             text_font=("System", 15,BOLD),
                                             command=submit_2)
-    sub_button_2.place(x=550,y=230)
+    sub_button_2.place(x=450,y=260)
     
     # THIRD SECTION
     # Creating a first decrease button the value of the label
@@ -319,7 +329,7 @@ def home():
                                             text_font=("System", 15,BOLD),
                                             command=decrease_value_3)
                                             
-    dec_button_3.place(x=400,y=300)
+    dec_button_3.place(x=300,y=360)
     # Creating a first label to display the value
     value_label_3 = customtkinter.CTkLabel(master=app,
                                          text="0",
@@ -333,7 +343,7 @@ def home():
                                         )
                                          
                                              
-    value_label_3.place(x=400,y=330)
+    value_label_3.place(x=300,y=390)
     # Creating a first button to increase the value of the label
     inc_button_3 = customtkinter.CTkButton(master=app,
                                             text="Increase",
@@ -344,7 +354,7 @@ def home():
                                             text_font=("System", 15,BOLD),
                                             command=increase_value_3)
                                             
-    inc_button_3.place(x=400,y=360)
+    inc_button_3.place(x=300,y=420)
     
     # Creating the button to first Submit the data
     sub_button_3 = customtkinter.CTkButton(master=app,
@@ -355,7 +365,7 @@ def home():
                                             corner_radius=8,
                                             text_font=("System", 15,BOLD),
                                             command=submit_3)
-    sub_button_3.place(x=550,y=330)
+    sub_button_3.place(x=450,y=390)
     
     
     
@@ -382,7 +392,7 @@ def home():
                                            variable=var2,
                                            onvalue=1,
                                            offvalue=0)                    
-    checkbox_2.place(x=10, y = 230)
+    checkbox_2.place(x=10, y = 260)
     # Creating the label_2
     label_2=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
@@ -391,13 +401,13 @@ def home():
                                       fg_color="red",
                                       corner_radius=20,
                                       text_color="white")
-    label_2.place(x=40,y=230)
+    label_2.place(x=40,y=260)
     # Creating the checkbox_3
     checkbox_3 = customtkinter.CTkCheckBox(master=app, command=checkbox_event_3,
                                            variable=var3,
                                            onvalue=1,
                                            offvalue=0)                    
-    checkbox_3.place(x=10, y = 330)
+    checkbox_3.place(x=10, y = 390)
     # Creating the label_3
     label_3 = customtkinter.CTkLabel(master=app,
                                       text="Non Active",
@@ -406,7 +416,7 @@ def home():
                                       fg_color="red",
                                       corner_radius=20,
                                       text_color="white")
-    label_3.place(x=40,y=330)
+    label_3.place(x=40,y=390)
     
     
     
