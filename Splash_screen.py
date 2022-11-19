@@ -134,19 +134,19 @@ def decrease_value_3():
 # Submit Button Functions Starts Here            
 def submit_1():
     file = open("i_value_1.txt","a")
-    file.write(str(var1.get())+": "+str(i)+"\n"+"Time: "+ "0"+str(h1)+":"+ "0"+str(m1)+":"+ "0"+str(s1)+"\n")
+    file.write(str(var1.get())+": "+str(i)+"\n"+"Starting Time: "+ "0"+str(h1)+":"+ "0"+str(m1)+":"+ "0"+str(s1)+"\n"+"Ending Time: "+ "0"+str(h11)+":"+ "0"+str(m11)+":"+ "0"+str(s11)+"\n")
     file.close()
 
         
 def submit_2():
     file = open("i_value_2.txt","a")
-    file.write(str(var2.get())+": "+str(j)+"\n"+"Time: "+ "0"+str(h2)+":"+ "0"+str(m2)+":"+ "0"+str(s2)+"\n")
+    file.write(str(var2.get())+": "+str(j)+"\n"+"Starting Time: "+ "0"+str(h2)+":"+ "0"+str(m2)+":"+ "0"+str(s2)+"\n"+"Ending Time: "+ "0"+str(h22)+":"+ "0"+str(m22)+":"+ "0"+str(s22)+"\n")
     file.close()
     
        
 def submit_3():
     file = open("i_value_3.txt","a")
-    file.write(str(var3.get())+": "+str(k)+"\n"+"Time: "+ "0"+str(h3)+":"+ "0"+str(m3)+":"+ "0"+str(s3)+"\n")
+    file.write(str(var3.get())+": "+str(k)+"\n"+"Starting Time: "+ "0"+str(h3)+":"+ "0"+str(m3)+":"+ "0"+str(s3)+"\n"+"Ending Time: "+ "0"+str(h33)+":"+ "0"+str(m33)+":"+ "0"+str(s33)+"\n")
     file.close()
 # Submit Button Functions Ends Here
 
