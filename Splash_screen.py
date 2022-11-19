@@ -310,6 +310,168 @@ def decrease_clock_seconds_3():
         if s3<10:
             second_label_3.configure(text="0"+str(s3))
 # Clock Seconds DECREMENT functions Ends Here
+
+
+# Second Clock Hours INCREMENT functions Starts Here
+def increase_clock_hours_11():
+    global h11
+    if h11<=23:
+        h11 = h11 + 1
+        hour_label_11.configure(text=h11)
+        if h11<10:
+            hour_label_11.configure(text="0"+str(h11))
+        
+def increase_clock_hours_22():
+    global h22
+    if h22<=23:
+        h22 = h22 + 1
+        hour_label_22.configure(text=h22)
+        if h22<10:
+            hour_label_22.configure(text="0"+str(h22))
+        
+def increase_clock_hours_33():
+    global h33
+    if h33<=23:
+        h33 = h33 + 1
+        hour_label_33.configure(text=h33)
+        if h33<10:
+            hour_label_33.configure(text="0"+str(h33))
+# Clock Hours INCREMENT functions Ends Here
+        
+              
+# Clock Hours DECREMENT functions Starts Here
+def decrease_clock_hours_11():
+    global h11
+    if h11>=1:
+        h11 = h11 - 1
+        hour_label_11.configure(text=h11)
+        if h11<10:
+            hour_label_11.configure(text="0"+str(h11))
+        
+def decrease_clock_hours_22():
+    global h22
+    if h22>=1:
+        h22 = h22 - 1
+        hour_label_22.configure(text=h22)
+        if h22<10:
+            hour_label_22.configure(text="0"+str(h22))
+        
+def decrease_clock_hours_33():
+    global h33
+    if h33>=1:
+        h33 = h33 - 1
+        hour_label_33.configure(text=h33)
+        if h33<10:
+            hour_label_33.configure(text="0"+str(h33))
+# Clock Hours DECREMENT functions Ends Here
+    
+     
+ # Clock Minutes INCREMENT functions Starts Here
+def increase_clock_minutes_11():
+    global m11
+    if m11<=59:
+        m11 = m11 + 1
+        minute_label_11.configure(text=m11)
+        if m11<10:
+            minute_label_11.configure(text="0"+str(m11))
+        
+def increase_clock_minutes_22():
+    global m22
+    if m22<=59:
+        m22 = m22 + 1
+        minute_label_22.configure(text=m22)
+        if m22<10:
+            minute_label_22.configure(text="0"+str(m22))
+        
+def increase_clock_minutes_33():
+    global m33
+    if m33<=59:
+        m33 = m33 + 1
+        minute_label_33.configure(text=m33)
+        if m33<10:
+            minute_label_33.configure(text="0"+str(m33))
+# Clock Minutes INCREMENT functions Ends Here
+        
+        
+# Clock Minutes DECREMENT functions Starts Here
+def decrease_clock_minutes_11():
+    global m11    
+    if m11>=1:
+        m11 = m11 - 1
+        minute_label_11.configure(text=m11)
+        if m11<10:
+            minute_label_11.configure(text="0"+str(m11))
+        
+def decrease_clock_minutes_22():
+    global m22
+    if m22>=1:
+        m22 = m22 - 1
+        minute_label_22.configure(text=m22)
+        if m22<10:
+            minute_label_22.configure(text="0"+str(m22))
+        
+def decrease_clock_minutes_33():
+    global m33
+    if m33>=1:
+        m33 = m33 - 1
+        minute_label_33.configure(text=m33)
+        if m33<10:
+            minute_label_33.configure(text="0"+str(m33))
+# Clock Minutes DECREMENT functions Ends Here
+        
+        
+        
+# Clock Seconds INCREMENT functions Starts Here
+def increase_clock_seconds_11():
+    global s11
+    if s11<=59:
+        s11 = s11 + 1
+        second_label_11.configure(text=s11)
+        if s11<10:
+            second_label_11.configure(text="0"+str(s11))
+        
+def increase_clock_seconds_22():
+    global s22
+    if s22<=59:
+        s22 = s22 + 1
+        second_label_22.configure(text=s22)
+        if s22<10:
+            second_label_22.configure(text="0"+str(s22))
+        
+def increase_clock_seconds_33():
+    global s33
+    if s33<=59:
+        s33 = s33 + 1
+        second_label_33.configure(text=s33)
+        if s33<10:
+            second_label_33.configure(text="0"+str(s33))
+# Clock Seconds INCREMENT functions Ends Here
+          
+        
+# Clock Seconds DECREMENT functions Starts Here
+def decrease_clock_seconds_11():
+    global s11
+    if s11>=1:
+        s11 = s11 - 1
+        second_label_11.configure(text=s11)
+        if s11<10:
+            second_label_11.configure(text="0"+str(s11))
+        
+def decrease_clock_seconds_22():
+    global s22
+    if s22>=1:
+        s22 = s22 - 1
+        second_label_22.configure(text=s22)
+        if s22<10:
+            second_label_22.configure(text="0"+str(s22))
+def decrease_clock_seconds_33():
+    global s33
+    if s33>=1:
+        s33 = s33 - 1
+        second_label_33.configure(text=s33)
+        if s33<10:
+            second_label_33.configure(text="0"+str(s33))
+# Clock Seconds DECREMENT functions Ends Here
         
 # Main Function to run the program      
 def home():
@@ -325,6 +487,15 @@ def home():
     global h3
     global m3
     global s3
+    global h11
+    global m11
+    global s11
+    global h22
+    global m22
+    global s22
+    global h33
+    global m33
+    global s33
     i = 0
     j = 0
     k = 0
@@ -337,6 +508,15 @@ def home():
     h3 = 0
     m3 = 0
     s3 = 0
+    h11 = 0
+    m11 = 0
+    s11 = 0
+    h22 = 0
+    m22 = 0
+    s22 = 0
+    h33 = 0
+    m33 = 0
+    s33 = 0
     
     global checkbox_1    # Making the checkbox_1 global
     global checkbox_2    # Making the checkbox_2 global
@@ -379,6 +559,18 @@ def home():
     global hour_label_3  # Making the third hour_label global
     global minute_label_3  # Making the third minute_label global
     global second_label_3  # Making the third second_label global
+    
+    global hour_label_11  # Making the first hour_label global
+    global minute_label_11  # Making the first minute_label global
+    global second_label_11  # Making the first second_label global
+
+    global hour_label_22  # Making the second hour_label global
+    global minute_label_22  # Making the second minute_label global
+    global second_label_22  # Making the second second_label global
+    
+    global hour_label_33  # Making the third hour_label global
+    global minute_label_33  # Making the third minute_label global
+    global second_label_33  # Making the third second_label global
     
     
     
@@ -1011,6 +1203,411 @@ def home():
                                             )
     decs_button_3.place(x=920,y=410)
     # ********** END OF CLOCK SECOND DECREMENT BUTTON SECTION *********
+    
+    
+    # CREATING A Second CLOCK
+    # CLOCK HOUR LABEL SECTION STARTS HERE
+    hour_label_11 = customtkinter.CTkLabel(master=app,
+                                         text="00",
+                                         text_font=("System", 15,BOLD),
+                                         bg_color="#F21350",
+                                         fg_color="gray",
+                                         corner_radius=8,
+                                         text_color="black",
+                                          width=20,
+                                          height=10
+                                        )
+                                         
+                                             
+    hour_label_11.place(x=1100,y=130)
+    
+    hour_label_22 = customtkinter.CTkLabel(master=app,
+                                         text="00",
+                                         text_font=("System", 15,BOLD),
+                                         bg_color="#F21350",
+                                         fg_color="gray",
+                                         corner_radius=8,
+                                         text_color="black",
+                                          width=20,
+                                          height=10
+                                        )
+                                         
+                                             
+    hour_label_22.place(x=1100,y=260)
+    
+    hour_label_33 = customtkinter.CTkLabel(master=app,
+                                         text="00",
+                                         text_font=("System", 15,BOLD),
+                                         bg_color="#F21350",
+                                         fg_color="gray",
+                                         corner_radius=8,
+                                         text_color="black",
+                                          width=20,
+                                          height=10
+                                        )
+                                         
+                                             
+    hour_label_33.place(x=1100,y=390)
+    # ********** END OF CLOCK HOUR LABEL SECTION **********
+    
+    
+    # CLOCK MINUTE LABEL SECTION STARTS HERE
+    minute_label_11 = customtkinter.CTkLabel(master=app,
+                                            text="00",
+                                            text_font=("System", 15,BOLD),
+                                            bg_color="#F21350",
+                                            fg_color="gray",
+                                            corner_radius=8,
+                                            text_color="black",
+                                            width=20,
+                                            height=10
+                                            )
+    minute_label_11.place(x=1160,y=130)
+    
+    minute_label_22 = customtkinter.CTkLabel(master=app,
+                                            text="00",
+                                            text_font=("System", 15,BOLD),
+                                            bg_color="#F21350",
+                                            fg_color="gray",
+                                            corner_radius=8,
+                                            text_color="black",
+                                            width=20,
+                                            height=10
+                                            )
+    minute_label_22.place(x=1160,y=260)
+    
+    minute_label_33 = customtkinter.CTkLabel(master=app,
+                                            text="00",
+                                            text_font=("System", 15,BOLD),
+                                            bg_color="#F21350",
+                                            fg_color="gray",
+                                            corner_radius=8,
+                                            text_color="black",
+                                            width=20,
+                                            height=10
+                                            )
+    minute_label_33.place(x=1160,y=390)
+    # ********** END OF CLOCK MINUTE LABEL SECTION **********
+     
+    
+    # CLOCK SECOND LABEL SECTION STARTS HERE
+    second_label_11 = customtkinter.CTkLabel(master=app,
+                                            text="00",
+                                            text_font=("System", 15,BOLD),
+                                            bg_color="#F21350",
+                                            fg_color="gray",
+                                            corner_radius=8,
+                                            text_color="black",
+                                            width=20,
+                                            height=10
+                                            )
+    second_label_11.place(x=1220,y=130)
+    
+    second_label_22 = customtkinter.CTkLabel(master=app,
+                                            text="00",
+                                            text_font=("System", 15,BOLD),
+                                            bg_color="#F21350",
+                                            fg_color="gray",
+                                            corner_radius=8,
+                                            text_color="black",
+                                            width=20,
+                                            height=10
+                                            )
+    second_label_22.place(x=1220,y=260)
+    
+    second_label_33 = customtkinter.CTkLabel(master=app,
+                                            text="00",
+                                            text_font=("System", 15,BOLD),
+                                            bg_color="#F21350",
+                                            fg_color="gray",
+                                            corner_radius=8,
+                                            text_color="black",
+                                            width=20,
+                                            height=10
+                                            )
+    second_label_33.place(x=1220,y=390)
+    
+    
+    
+    
+    
+    
+    
+    
+    # CLOCK HOUR INCREMENT BUTTON SECTION STARTS HERE
+    inch_button_11 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=increase_clock_hours_11
+                                            )
+                                            
+    inch_button_11.place(x=1100,y=100)
+    
+    inch_button_22 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=increase_clock_hours_22
+                                            )
+                                            
+    inch_button_22.place(x=1100,y=230)
+    
+    inch_button_33 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=increase_clock_hours_33
+                                            )
+                                            
+    inch_button_33.place(x=1100,y=360)
+    # ********** END OF CLOCK HOUR INCREMENT BUTTON SECTION **********
+    
+    
+    # CLOCK HOUR DECREMENT BUTTON SECTION STARTS HERE
+    dech_button_11 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=decrease_clock_hours_11
+                                            )
+    dech_button_11.place(x=1100,y=150)
+    
+    dech_button_22 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=decrease_clock_hours_22
+                                            )
+    dech_button_22.place(x=1100,y=280)
+    
+    dech_button_33 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=decrease_clock_hours_33
+                                            )
+    dech_button_33.place(x=1100,y=410)
+    # ********** END OF CLOCK HOUR DECREMENT BUTTON SECTION **********
+    
+    # CLOCK MINUTE INCREMENT BUTTON SECTION STARTS HERE
+    incm_button_11 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=increase_clock_minutes_11
+                                            )
+    incm_button_11.place(x=1160,y=100)
+    
+    incm_button_22 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=increase_clock_minutes_22
+                                            )
+    incm_button_22.place(x=1160,y=230)
+    
+    incm_button_33 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=increase_clock_minutes_33
+                                            )
+    incm_button_33.place(x=1160,y=360)
+    # ********** END OF CLOCK MINUTE INCREMENT BUTTON SECTION **********
+    
+
+    # CLOCK MINUTE DECREMENT BUTTON SECTION STARTS HERE
+    decm_button_11 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=decrease_clock_minutes_11
+                                            )
+    decm_button_11.place(x=1160,y=150)
+    
+    decm_button_22 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=decrease_clock_minutes_22
+                                            )
+    decm_button_22.place(x=1160,y=280)
+    
+    decm_button_33 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=decrease_clock_minutes_33
+                                            )
+    decm_button_33.place(x=1160,y=410)
+    # ********** END OF CLOCK MINUTE DECREMENT BUTTON SECTION *********
+    
+    
+    # CLOCK SECOND INCREMENT BUTTON SECTION STARTS HERE
+    incs_button_11 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=increase_clock_seconds_11
+                                            )
+    incs_button_11.place(x=1220,y=100)
+    
+    incs_button_22 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=increase_clock_seconds_22
+                                            )
+    incs_button_22.place(x=1220,y=230)
+    
+    incs_button_33 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=increase_clock_seconds_33
+                                            )
+    incs_button_33.place(x=1220,y=360)
+    # ********** END OF CLOCK SECOND INCREMENT BUTTON SECTION **********
+    
+    
+    # CLOCK SECOND DECREMENT BUTTON SECTION STARTS HERE
+    decs_button_11 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=decrease_clock_seconds_11
+                                            )
+    decs_button_11.place(x=1220,y=150)
+    
+    decs_button_22 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=decrease_clock_seconds_22
+                                            )
+    decs_button_22.place(x=1220,y=280)
+    
+    decs_button_33 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            #text_color="white",
+                                            #compound="center",
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            command=decrease_clock_seconds_33
+                                            )
+    decs_button_33.place(x=1220,y=410)
+    # ********** END OF CLOCK SECOND DECREMENT BUTTON SECTION *********
+    
+    
+    
+    
     
 
     # QUIT BUTTON SECTION STARTS HERE
