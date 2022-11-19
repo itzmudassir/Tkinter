@@ -134,19 +134,19 @@ def decrease_value_3():
 # Submit Button Functions Starts Here            
 def submit_1():
     file = open("i_value_1.txt","a")
-    file.write(str(var1.get())+": "+str(i)+"\n")
+    file.write(str(var1.get())+": "+str(i)+"\n"+"Time: "+ "0"+str(h1)+":"+ "0"+str(m1)+":"+ "0"+str(s1)+"\n")
     file.close()
 
         
 def submit_2():
     file = open("i_value_2.txt","a")
-    file.write(str(var2.get())+": "+str(j)+"\n")
+    file.write(str(var2.get())+": "+str(j)+"\n"+"Time: "+ "0"+str(h2)+":"+ "0"+str(m2)+":"+ "0"+str(s2)+"\n")
     file.close()
     
        
 def submit_3():
     file = open("i_value_3.txt","a")
-    file.write(str(var3.get())+": "+str(k)+"\n")
+    file.write(str(var3.get())+": "+str(k)+"\n"+"Time: "+ "0"+str(h3)+":"+ "0"+str(m3)+":"+ "0"+str(s3)+"\n")
     file.close()
 # Submit Button Functions Ends Here
 
@@ -156,18 +156,24 @@ def increase_clock_hours_1():
     if h1<=23:
         h1 = h1 + 1
         hour_label_1.configure(text=h1)
+        if h1<10:
+            hour_label_1.configure(text="0"+str(h1))
         
 def increase_clock_hours_2():
     global h2
     if h2<=23:
         h2 = h2 + 1
         hour_label_2.configure(text=h2)
+        if h2<10:
+            hour_label_2.configure(text="0"+str(h2))
         
 def increase_clock_hours_3():
     global h3
     if h3<=23:
         h3 = h3 + 1
         hour_label_3.configure(text=h3)
+        if h3<10:
+            hour_label_3.configure(text="0"+str(h3))
 # Clock Hours INCREMENT functions Ends Here
         
               
@@ -177,18 +183,24 @@ def decrease_clock_hours_1():
     if h1>=1:
         h1 = h1 - 1
         hour_label_1.configure(text=h1)
+        if h1<10:
+            hour_label_1.configure(text="0"+str(h1))
         
 def decrease_clock_hours_2():
     global h2
     if h2>=1:
         h2 = h2 - 1
         hour_label_2.configure(text=h2)
+        if h2<10:
+            hour_label_2.configure(text="0"+str(h2))
         
 def decrease_clock_hours_3():
     global h3
     if h3>=1:
         h3 = h3 - 1
         hour_label_3.configure(text=h3)
+        if h3<10:
+            hour_label_3.configure(text="0"+str(h3))
 # Clock Hours DECREMENT functions Ends Here
     
      
@@ -198,18 +210,24 @@ def increase_clock_minutes_1():
     if m1<=59:
         m1 = m1 + 1
         minute_label_1.configure(text=m1)
+        if m1<10:
+            minute_label_1.configure(text="0"+str(m1))
         
 def increase_clock_minutes_2():
     global m2
     if m2<=59:
         m2 = m2 + 1
         minute_label_2.configure(text=m2)
+        if m2<10:
+            minute_label_2.configure(text="0"+str(m2))
         
 def increase_clock_minutes_3():
     global m3
     if m3<=59:
         m3 = m3 + 1
         minute_label_3.configure(text=m3)
+        if m3<10:
+            minute_label_3.configure(text="0"+str(m3))
 # Clock Minutes INCREMENT functions Ends Here
         
         
@@ -219,18 +237,24 @@ def decrease_clock_minutes_1():
     if m1>=1:
         m1 = m1 - 1
         minute_label_1.configure(text=m1)
+        if m1<10:
+            minute_label_1.configure(text="0"+str(m1))
         
 def decrease_clock_minutes_2():
     global m2
     if m2>=1:
         m2 = m2 - 1
         minute_label_2.configure(text=m2)
+        if m2<10:
+            minute_label_2.configure(text="0"+str(m2))
         
 def decrease_clock_minutes_3():
     global m3
     if m3>=1:
         m3 = m3 - 1
         minute_label_3.configure(text=m3)
+        if m3<10:
+            minute_label_3.configure(text="0"+str(m3))
 # Clock Minutes DECREMENT functions Ends Here
         
         
@@ -241,39 +265,50 @@ def increase_clock_seconds_1():
     if s1<=59:
         s1 = s1 + 1
         second_label_1.configure(text=s1)
+        if s1<10:
+            second_label_1.configure(text="0"+str(s1))
         
 def increase_clock_seconds_2():
     global s2
     if s2<=59:
         s2 = s2 + 1
         second_label_2.configure(text=s2)
+        if s2<10:
+            second_label_2.configure(text="0"+str(s2))
         
 def increase_clock_seconds_3():
     global s3
     if s3<=59:
         s3 = s3 + 1
         second_label_3.configure(text=s3)
+        if s3<10:
+            second_label_3.configure(text="0"+str(s3))
 # Clock Seconds INCREMENT functions Ends Here
           
         
 # Clock Seconds DECREMENT functions Starts Here
 def decrease_clock_seconds_1():
     global s1
-    if s>=1:
-        s = s - 1
-        second_label_1.configure(text=s)
+    if s1>=1:
+        s1 = s1 - 1
+        second_label_1.configure(text=s1)
+        if s1<10:
+            second_label_1.configure(text="0"+str(s1))
         
 def decrease_clock_seconds_2():
     global s2
     if s2>=1:
         s2 = s2 - 1
         second_label_2.configure(text=s2)
-        
+        if s2<10:
+            second_label_2.configure(text="0"+str(s2))
 def decrease_clock_seconds_3():
     global s3
     if s3>=1:
         s3 = s3 - 1
         second_label_3.configure(text=s3)
+        if s3<10:
+            second_label_3.configure(text="0"+str(s3))
 # Clock Seconds DECREMENT functions Ends Here
         
 # Main Function to run the program      
