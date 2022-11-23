@@ -10,6 +10,8 @@ from turtle import title, width
 import customtkinter
 from PIL import ImageTk,Image
 from tkinter.font import BOLD
+from datetime import datetime
+import threading
 
 
 # Appearence of the window
@@ -133,20 +135,96 @@ def decrease_value_3():
 
 # Submit Button Functions Starts Here            
 def submit_1():
-    file = open("i_value_1.txt","a")
-    file.write(str(var1.get())+": "+str(i)+"\n"+"Starting Time: "+ "0"+str(h1)+":"+ "0"+str(m1)+":"+ "0"+str(s1)+"\n"+"Ending Time: "+ "0"+str(h11)+":"+ "0"+str(m11)+":"+ "0"+str(s11)+"\n")
+    file = open("i_value_1.txt","w")
+    file.write(str(var1.get())+": "+str(i)+"\n"+"Starting Time: ")
+    if h1<10:
+        file.write("0"+str(h1)+":")
+    else:
+        file.write(str(h1)+":")
+    if m1<10:
+        file.write("0"+str(m1)+":")
+    else:
+        file.write(str(m1)+":")
+    if s1<10:
+        file.write("0"+str(s1)+"\n")
+    else:
+        file.write(str(s1)+"\n")
+    file.write("Ending Time: ") 
+    if h11<10:
+        file.write("0"+str(h11)+":")
+    else:
+        file.write(str(h11)+":")
+    if m11<10:
+        file.write("0"+str(m11)+":")
+    else:
+        file.write(str(m11)+":")
+    if s11<10:
+        file.write("0"+str(s11)+"\n")
+    else:
+        file.write(str(s11)+"\n")
+               
     file.close()
 
         
 def submit_2():
-    file = open("i_value_2.txt","a")
-    file.write(str(var2.get())+": "+str(j)+"\n"+"Starting Time: "+ "0"+str(h2)+":"+ "0"+str(m2)+":"+ "0"+str(s2)+"\n"+"Ending Time: "+ "0"+str(h22)+":"+ "0"+str(m22)+":"+ "0"+str(s22)+"\n")
+    file = open("i_value_2.txt","w")
+    file.write(str(var2.get())+": "+str(j)+"\n"+"Starting Time: ")
+    if h2<10:
+        file.write("0"+str(h2)+":")
+    else:
+        file.write(str(h2)+":")
+    if m2<10:
+        file.write("0"+str(m2)+":")
+    else:
+        file.write(str(m2)+":")
+    if s2<10:
+        file.write("0"+str(s2)+"\n")
+    else:
+        file.write(str(s2)+"\n")
+    file.write("Ending Time: ")
+    if h22<10:
+        file.write("0"+str(h22)+":")
+    else:
+        file.write(str(h22)+":")
+    if m22<10:
+        file.write("0"+str(m22)+":")
+    else:
+        file.write(str(m22)+":")
+    if s22<10:
+        file.write("0"+str(s22)+"\n")
+    else:
+        file.write(str(s22)+"\n")
     file.close()
     
        
 def submit_3():
-    file = open("i_value_3.txt","a")
-    file.write(str(var3.get())+": "+str(k)+"\n"+"Starting Time: "+ "0"+str(h3)+":"+ "0"+str(m3)+":"+ "0"+str(s3)+"\n"+"Ending Time: "+ "0"+str(h33)+":"+ "0"+str(m33)+":"+ "0"+str(s33)+"\n")
+    file = open("i_value_3.txt","w")
+    file.write(str(var3.get())+": "+str(k)+"\n"+"Starting Time: ")
+    if h3<10:
+        file.write("0"+str(h3)+":")
+    else:
+        file.write(str(h3)+":")
+    if m3<10:
+        file.write("0"+str(m3)+":")
+    else:
+        file.write(str(m3)+":")
+    if s3<10:
+        file.write("0"+str(s3)+"\n")
+    else:
+        file.write(str(s3)+"\n")
+    file.write("Ending Time: ")
+    if h33<10:
+        file.write("0"+str(h33)+":")
+    else:
+        file.write(str(h33)+":")
+    if m33<10:
+        file.write("0"+str(m33)+":")
+    else:
+        file.write(str(m33)+":")
+    if s33<10:
+        file.write("0"+str(s33)+"\n")
+    else:
+        file.write(str(s33)+"\n")
     file.close()
 # Submit Button Functions Ends Here
 
@@ -472,6 +550,7 @@ def decrease_clock_seconds_33():
         if s33<10:
             second_label_33.configure(text="0"+str(s33))
 # Clock Seconds DECREMENT functions Ends Here
+
         
 # Main Function to run the program      
 def home():
@@ -1621,10 +1700,6 @@ def home():
                                             command=quit)
     quit_button.place(x=1250,y=10)
     
-    
-    
-    
-
     
 # Creating the Splash Screen
 frame1=customtkinter.CTkFrame(master=app,           # Creating the frame for the splash screen
