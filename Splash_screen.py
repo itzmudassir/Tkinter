@@ -11,7 +11,8 @@ import customtkinter
 from PIL import ImageTk,Image
 from tkinter.font import BOLD
 from datetime import datetime
-import threading
+import time
+
 
 
 # Appearence of the window
@@ -551,7 +552,163 @@ def decrease_clock_seconds_33():
             second_label_33.configure(text="0"+str(s33))
 # Clock Seconds DECREMENT functions Ends Here
 
-        
+# READ FROM TEXT FILE
+def read_from_text_file():
+    global modified
+    file = open("i_value_1.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    print(modified[1][15:])
+
+# Read Time From PC
+def read_time_from_pc():
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    print("Current Time =", current_time)
+# Read Time From PC Ends Here
+
+# Alarm ON Function Starts Here
+def alarm_on_1():
+    global modified
+    global current_time
+    file = open("i_value_1.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[1][15:]
+    modified = modified.split(":")
+    print(modified)
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    current_time = current_time.split(":")
+    print(current_time)
+    if modified[0]==current_time[0] and modified[1]==current_time[1] and modified[2]==current_time[2]:
+        print("GPIO 1 ON")
+    else:
+        print("GPIO 1 OFF")
+    app.after(1000, alarm_on_1)
+    
+def alarm_on_2():
+    global modified
+    global current_time
+    file = open("i_value_2.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[1][15:]
+    modified = modified.split(":")
+    print(modified)
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    current_time = current_time.split(":")
+    print(current_time)
+    if modified[0]==current_time[0] and modified[1]==current_time[1] and modified[2]==current_time[2]:
+        print("GPIO 2 ON")
+    else:
+        print("GPIO 2 OFF")
+    app.after(1000, alarm_on_2)
+    
+    
+def alarm_on_3():
+    global modified
+    global current_time
+    file = open("i_value_3.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[1][15:]
+    modified = modified.split(":")
+    print(modified)
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    current_time = current_time.split(":")
+    print(current_time)
+    if modified[0]==current_time[0] and modified[1]==current_time[1] and modified[2]==current_time[2]:
+        print("GPIO 3 ON")
+    else:
+        print("GPIO 3 OFF")
+    app.after(1000, alarm_on_3)
+# Alarm ON Function Ends Here
+
+
+# Alarm OFF Function Starts Here
+def alarm_off_1():
+    global modified
+    global current_time
+    file = open("i_value_1.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[2][12:]
+    modified = modified.split(":")
+    print(modified)
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    current_time = current_time.split(":")
+    print(current_time)
+    if modified[0]==current_time[0] and modified[1]==current_time[1] and modified[2]==current_time[2]:
+        print("GPIO 1 OFF")
+    else:
+        print("GPIO 1 ON")
+    app.after(1000, alarm_off_1)
+    
+    
+def alarm_off_2():
+    global modified
+    global current_time
+    file = open("i_value_2.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[2][12:]
+    modified = modified.split(":")
+    print(modified)
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    current_time = current_time.split(":")
+    print(current_time)
+    if modified[0]==current_time[0] and modified[1]==current_time[1] and modified[2]==current_time[2]:
+        print("GPIO 2 OFF")
+    else:
+        print("GPIO 2 ON")
+    app.after(1000, alarm_off_2)
+    
+def alarm_off_3():
+    global modified
+    global current_time
+    file = open("i_value_3.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[2][12:]
+    modified = modified.split(":")
+    print(modified)
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    current_time = current_time.split(":")
+    print(current_time)
+    if modified[0]==current_time[0] and modified[1]==current_time[1] and modified[2]==current_time[2]:
+        print("GPIO 3 OFF")
+    else:
+        print("GPIO 3 ON")
+    app.after(1000, alarm_off_3)
+# Alarm OFF Function Ends Here
+
 # Main Function to run the program      
 def home():
     global i 
@@ -1683,11 +1840,6 @@ def home():
                                             )
     decs_button_33.place(x=1220,y=410)
     # ********** END OF CLOCK SECOND DECREMENT BUTTON SECTION *********
-    
-    
-    
-    
-    
 
     # QUIT BUTTON SECTION STARTS HERE
     quit_button = customtkinter.CTkButton(master=app,
@@ -1700,6 +1852,9 @@ def home():
                                             command=quit)
     quit_button.place(x=1250,y=10)
     
+    # ********** END OF QUIT BUTTON SECTION **********
+    
+    
     
 # Creating the Splash Screen
 frame1=customtkinter.CTkFrame(master=app,           # Creating the frame for the splash screen
@@ -1707,12 +1862,24 @@ frame1=customtkinter.CTkFrame(master=app,           # Creating the frame for the
                               corner_radius=20,
                               fg_color="white")
 frame1.place(x=0 ,y=0,width=1366,height=768)
-logo=ImageTk.PhotoImage(Image.open("Elements\iub_logo_1.png"))  # Importing the logo
+logo=ImageTk.PhotoImage(Image.open("Elements\\iub_logo_1.png"))  # Importing the logo
 label_photo= customtkinter.CTkLabel(master=frame1,image=logo)
 label_photo.pack()
 
 app.after(3000,frame1.destroy)    # Destroying the splash screen after 3 seconds
 app.after(3000,home)              # Calling the home function after 3 seconds
+alarm_on_1()                      # Calling the alarm_on_1 function after 3 seconds
+alarm_off_1()                     # Calling the alarm_off_1 function after 3 seconds
+alarm_on_2()                      # Calling the alarm_on_2 function after 3 seconds
+alarm_off_2()                     # Calling the alarm_off_2 function after 3 seconds
+alarm_on_3()                      # Calling the alarm_on_3 function after 3 seconds
+alarm_off_3()                     # Calling the alarm_off_3 function after 3 seconds
+
+
+
+
+
+    
 
 
 
