@@ -12,6 +12,7 @@ from PIL import ImageTk,Image
 from tkinter.font import BOLD
 from datetime import datetime
 import time
+from tkVideoPlayer import TkinterVideo
 
 
 
@@ -22,27 +23,27 @@ customtkinter.set_default_color_theme("blue")
 # Creating the window
 app=customtkinter.CTk()
 app.wm_attributes('-fullscreen','True')
-app.configure(bg="#F21350")
+app.configure(bg="white")
 
 # CHECKBOXES FUNCTIONS STARTS HERE
 def checkbox_event_1():
     if(var1.get() == 1):
         label_1 = customtkinter.CTkLabel(master=app,
                                       text="Activated",
-                                      text_font=("System", 15,BOLD),
-                                      bg_color="#F21350",
-                                      fg_color="yellow",
-                                      corner_radius=20,
-                                      text_color="black")
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="green",
+                                      corner_radius=13,
+                                      text_color="white")
                                       
         label_1.place(x=40,y=130)
     else:
         label_1 = customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("System", 15,BOLD),
-                                      bg_color="#F21350",
-                                      fg_color="black",
-                                      corner_radius=20,
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
                                       text_color="white")
                                       
         label_1.place(x=40,y=130)
@@ -52,19 +53,19 @@ def checkbox_event_2():
     if(var2.get() == 1):
         label_2=customtkinter.CTkLabel(master=app,
                                       text="Activated",
-                                      text_font=("System", 15,BOLD),
-                                      bg_color="#F21350",
-                                      fg_color="yellow",
-                                      corner_radius=20,
-                                      text_color="black")
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="green",
+                                      corner_radius=13,
+                                      text_color="white")
         label_2.place(x=40,y=260)
     else:
         label_2=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("System", 15,BOLD),
-                                      bg_color="#F21350",
-                                      fg_color="black",
-                                      corner_radius=20,
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
                                       text_color="white")
         label_2.place(x=40,y=260)
 
@@ -73,19 +74,19 @@ def checkbox_event_3():
     if(var3.get() == 1):
         label_2=customtkinter.CTkLabel(master=app,
                                       text="Activated",
-                                      text_font=("System", 15,BOLD),
-                                      bg_color="#F21350",
-                                      fg_color="yellow",
-                                      corner_radius=20,
-                                      text_color="black")
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="green",
+                                      corner_radius=13,
+                                      text_color="white")
         label_2.place(x=40,y=390)
     else:
         label_2=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("System", 15,BOLD),
-                                      bg_color="#F21350",
-                                      fg_color="black",
-                                      corner_radius=20,
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
                                       text_color="white")
         label_2.place(x=40,y=390)
         
@@ -812,16 +813,18 @@ def home():
     
     # Creating the title of the window
     title1=customtkinter.CTkLabel(master=app,
-                                  text="Tech IQ Smart Packing System",
-                                  text_font=("DM Sans", -42,BOLD),
-                                  text_color="white")
+                                  text="ꜱᴄʜᴇᴅᴜʟɪɴɢ ꜱʏꜱᴛᴇᴍ",
+                                  text_font=("Arial", 40, "bold"),
+                                  text_color="#0D9986")
     title1.place(x=440,y=10)
     
     # IMAGE SECTION STARTS HERE
     
     # Define our images
-    up_arrow = ImageTk.PhotoImage(Image.open("up_squared.png").resize((20,20)), Image.ANTIALIAS)
-    down_arrow = ImageTk.PhotoImage(Image.open("down_squared.png").resize((20,20)), Image.ANTIALIAS)
+    up_arrow = ImageTk.PhotoImage(Image.open("Elements\\up-arrow_1.png").resize((25,25)), Image.ANTIALIAS)
+    down_arrow = ImageTk.PhotoImage(Image.open("Elements\\chevron.png").resize((25,25)), Image.ANTIALIAS)
+    light_off = ImageTk.PhotoImage(Image.open("Elements\\light_off.png").resize((30,30)), Image.ANTIALIAS)
+    light_on = ImageTk.PhotoImage(Image.open("Elements\\light_on.png").resize((100,100)), Image.ANTIALIAS)
     
     
     # CHECKBOX SECTION STARTS HERE
@@ -848,29 +851,29 @@ def home():
     # CHECKBOX LABEL SECTION STARTS HERE
     label_1 = customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("System", 15,BOLD),
-                                      bg_color="#F21350",
-                                      fg_color="black",
-                                      corner_radius=20,
+                                      text_font=("Arial", 15, "bold"),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
                                       text_color="white")
                                       
     label_1.place(x=40,y=130)
     
     label_2=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("System", 15,BOLD),
-                                      bg_color="#F21350",
-                                      fg_color="black",
-                                      corner_radius=20,
+                                      text_font=("Arial", 15, "bold"),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
                                       text_color="white")
     label_2.place(x=40,y=260)
     
     label_3 = customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("System", 15,BOLD),
-                                      bg_color="#F21350",
-                                      fg_color="black",
-                                      corner_radius=20,
+                                      text_font=("Arial", 15, "bold"),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
                                       text_color="white")
     label_3.place(x=40,y=390)
     # ********** END OF CHECKBOX LABEL SECTION **********
@@ -966,9 +969,9 @@ def home():
     # INREMENR/DECREMENT VALUE LABEL SECTION STARTS HERE
     value_label_1 = customtkinter.CTkLabel(master=app,
                                          text="0",
-                                         text_font=("System", 15,BOLD),
-                                         bg_color="#F21350",
-                                         fg_color="gray",
+                                         text_font=("Arial", 18,BOLD),
+                                         bg_color="white",
+                                         fg_color="white",
                                          corner_radius=8,
                                          text_color="black",
                                         #  width=20,
@@ -980,9 +983,9 @@ def home():
     
     value_label_2 = customtkinter.CTkLabel(master=app,
                                          text="0",
-                                         text_font=("System", 15,BOLD),
-                                         bg_color="#F21350",
-                                         fg_color="gray",
+                                         text_font=("Arial", 18,BOLD),
+                                         bg_color="white",
+                                         fg_color="white",
                                          corner_radius=8,
                                          text_color="black",
                                         #  width=20,
@@ -994,9 +997,9 @@ def home():
     
     value_label_3 = customtkinter.CTkLabel(master=app,
                                          text="0",
-                                         text_font=("System", 15,BOLD),
-                                         bg_color="#F21350",
-                                         fg_color="gray",
+                                         text_font=("Arial", 15,BOLD),
+                                         bg_color="white",
+                                         fg_color="white",
                                          corner_radius=8,
                                          text_color="black",
                                         #  width=20,
@@ -1009,44 +1012,44 @@ def home():
     
     # SUBMIT BUTTON SECTION STARTS HERE
     sub_button_1 = customtkinter.CTkButton(master=app,
-                                            text="Submit",
-                                            text_color="white",
+                                            text="ꜱᴜʙᴍɪᴛ",
+                                            text_color="black",
                                             hover_color="blue",
-                                            fg_color="black",
+                                            fg_color="#08ECFF",
                                             corner_radius=8,
-                                            text_font=("System", 15,BOLD),
+                                            text_font=("Arial", 15,BOLD),
                                             command=submit_1)
-    sub_button_1.place(x=450,y=130)
+    sub_button_1.place(x=1150,y=130)
     
     sub_button_2 = customtkinter.CTkButton(master=app,
-                                            text="Submit",
-                                            text_color="white",
+                                            text="ꜱᴜʙᴍɪᴛ",
+                                            text_color="black",
                                             hover_color="blue",
-                                            fg_color="black",
+                                            fg_color="#08ECFF",
                                             corner_radius=8,
-                                            text_font=("System", 15,BOLD),
+                                            text_font=("Arial", 15,BOLD),
                                             command=submit_2)
-    sub_button_2.place(x=450,y=260)
+    sub_button_2.place(x=1150,y=260)
     
  
     sub_button_3 = customtkinter.CTkButton(master=app,
-                                            text="Submit",
-                                            text_color="white",
+                                            text="ꜱᴜʙᴍɪᴛ",
+                                            text_color="black",
                                             hover_color="blue",
-                                            fg_color="black",
+                                            fg_color="#08ECFF",
                                             corner_radius=8,
-                                            text_font=("System", 15,BOLD),
+                                            text_font=("Arial", 15,BOLD),
                                             command=submit_3)
-    sub_button_3.place(x=450,y=390)
+    sub_button_3.place(x=1150,y=390)
     # ********** END OF SUBMIT BUTTON SECTION **********
     
     # CREATING A CLOCK
     # CLOCK HOUR LABEL SECTION STARTS HERE
     hour_label_1 = customtkinter.CTkLabel(master=app,
                                          text="00",
-                                         text_font=("System", 15,BOLD),
-                                         bg_color="#F21350",
-                                         fg_color="gray",
+                                         text_font=("Arial", 15,BOLD),
+                                         bg_color="white",
+                                         fg_color="white",
                                          corner_radius=8,
                                          text_color="black",
                                           width=20,
@@ -1054,13 +1057,13 @@ def home():
                                         )
                                          
                                              
-    hour_label_1.place(x=800,y=130)
+    hour_label_1.place(x=600,y=130)
     
     hour_label_2 = customtkinter.CTkLabel(master=app,
                                          text="00",
-                                         text_font=("System", 15,BOLD),
-                                         bg_color="#F21350",
-                                         fg_color="gray",
+                                         text_font=("Arial", 15,BOLD),
+                                         bg_color="white",
+                                         fg_color="white",
                                          corner_radius=8,
                                          text_color="black",
                                           width=20,
@@ -1068,13 +1071,13 @@ def home():
                                         )
                                          
                                              
-    hour_label_2.place(x=800,y=260)
+    hour_label_2.place(x=600,y=260)
     
     hour_label_3 = customtkinter.CTkLabel(master=app,
                                          text="00",
-                                         text_font=("System", 15,BOLD),
-                                         bg_color="#F21350",
-                                         fg_color="gray",
+                                         text_font=("Arial", 15,BOLD),
+                                         bg_color="white",
+                                         fg_color="white",
                                          corner_radius=8,
                                          text_color="black",
                                           width=20,
@@ -1082,85 +1085,85 @@ def home():
                                         )
                                          
                                              
-    hour_label_3.place(x=800,y=390)
+    hour_label_3.place(x=600,y=390)
     # ********** END OF CLOCK HOUR LABEL SECTION **********
     
     
     # CLOCK MINUTE LABEL SECTION STARTS HERE
     minute_label_1 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="#F21350",
-                                            fg_color="gray",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_color="black",
                                             width=20,
                                             height=10
                                             )
-    minute_label_1.place(x=860,y=130)
+    minute_label_1.place(x=660,y=130)
     
     minute_label_2 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="#F21350",
-                                            fg_color="gray",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_color="black",
                                             width=20,
                                             height=10
                                             )
-    minute_label_2.place(x=860,y=260)
+    minute_label_2.place(x=660,y=260)
     
     minute_label_3 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="#F21350",
-                                            fg_color="gray",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_color="black",
                                             width=20,
                                             height=10
                                             )
-    minute_label_3.place(x=860,y=390)
+    minute_label_3.place(x=660,y=390)
     # ********** END OF CLOCK MINUTE LABEL SECTION **********
      
     
     # CLOCK SECOND LABEL SECTION STARTS HERE
     second_label_1 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="#F21350",
-                                            fg_color="gray",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_color="black",
                                             width=20,
                                             height=10
                                             )
-    second_label_1.place(x=920,y=130)
+    second_label_1.place(x=720,y=130)
     
     second_label_2 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="#F21350",
-                                            fg_color="gray",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_color="black",
                                             width=20,
                                             height=10
                                             )
-    second_label_2.place(x=920,y=260)
+    second_label_2.place(x=720,y=260)
     
     second_label_3 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="#F21350",
-                                            fg_color="gray",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_color="black",
                                             width=20,
                                             height=10
                                             )
-    second_label_3.place(x=920,y=390)
+    second_label_3.place(x=720,y=390)
     
     
     
@@ -1183,7 +1186,7 @@ def home():
                                             command=increase_clock_hours_1
                                             )
                                             
-    inch_button_1.place(x=800,y=100)
+    inch_button_1.place(x=605,y=100)
     
     inch_button_2 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1198,7 +1201,7 @@ def home():
                                             command=increase_clock_hours_2
                                             )
                                             
-    inch_button_2.place(x=800,y=230)
+    inch_button_2.place(x=605,y=230)
     
     inch_button_3 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1213,7 +1216,7 @@ def home():
                                             command=increase_clock_hours_3
                                             )
                                             
-    inch_button_3.place(x=800,y=360)
+    inch_button_3.place(x=605,y=360)
     # ********** END OF CLOCK HOUR INCREMENT BUTTON SECTION **********
     
     
@@ -1230,7 +1233,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_hours_1
                                             )
-    dech_button_1.place(x=800,y=150)
+    dech_button_1.place(x=605,y=160)
     
     dech_button_2 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1244,7 +1247,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_hours_2
                                             )
-    dech_button_2.place(x=800,y=280)
+    dech_button_2.place(x=605,y=290)
     
     dech_button_3 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1258,7 +1261,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_hours_3
                                             )
-    dech_button_3.place(x=800,y=410)
+    dech_button_3.place(x=605,y=420)
     # ********** END OF CLOCK HOUR DECREMENT BUTTON SECTION **********
     
     # CLOCK MINUTE INCREMENT BUTTON SECTION STARTS HERE
@@ -1274,7 +1277,7 @@ def home():
                                             #height=10,
                                             command=increase_clock_minutes_1
                                             )
-    incm_button_1.place(x=860,y=100)
+    incm_button_1.place(x=665,y=100)
     
     incm_button_2 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1288,7 +1291,7 @@ def home():
                                             #height=10,
                                             command=increase_clock_minutes_2
                                             )
-    incm_button_2.place(x=860,y=230)
+    incm_button_2.place(x=665,y=230)
     
     incm_button_3 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1302,7 +1305,7 @@ def home():
                                             #height=10,
                                             command=increase_clock_minutes_3
                                             )
-    incm_button_3.place(x=860,y=360)
+    incm_button_3.place(x=665,y=360)
     # ********** END OF CLOCK MINUTE INCREMENT BUTTON SECTION **********
     
 
@@ -1319,7 +1322,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_minutes_1
                                             )
-    decm_button_1.place(x=860,y=150)
+    decm_button_1.place(x=665,y=160)
     
     decm_button_2 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1333,7 +1336,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_minutes_2
                                             )
-    decm_button_2.place(x=860,y=280)
+    decm_button_2.place(x=665,y=290)
     
     decm_button_3 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1347,7 +1350,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_minutes_3
                                             )
-    decm_button_3.place(x=860,y=410)
+    decm_button_3.place(x=665,y=420)
     # ********** END OF CLOCK MINUTE DECREMENT BUTTON SECTION *********
     
     
@@ -1364,7 +1367,7 @@ def home():
                                             #height=10,
                                             command=increase_clock_seconds_1
                                             )
-    incs_button_1.place(x=920,y=100)
+    incs_button_1.place(x=725,y=100)
     
     incs_button_2 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1378,7 +1381,7 @@ def home():
                                             #height=10,
                                             command=increase_clock_seconds_2
                                             )
-    incs_button_2.place(x=920,y=230)
+    incs_button_2.place(x=725,y=230)
     
     incs_button_3 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1392,7 +1395,7 @@ def home():
                                             #height=10,
                                             command=increase_clock_seconds_3
                                             )
-    incs_button_3.place(x=920,y=360)
+    incs_button_3.place(x=725,y=360)
     # ********** END OF CLOCK SECOND INCREMENT BUTTON SECTION **********
     
     
@@ -1409,7 +1412,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_seconds_1
                                             )
-    decs_button_1.place(x=920,y=150)
+    decs_button_1.place(x=725,y=160)
     
     decs_button_2 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1423,7 +1426,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_seconds_2
                                             )
-    decs_button_2.place(x=920,y=280)
+    decs_button_2.place(x=725,y=290)
     
     decs_button_3 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1437,7 +1440,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_seconds_3
                                             )
-    decs_button_3.place(x=920,y=410)
+    decs_button_3.place(x=725,y=420)
     # ********** END OF CLOCK SECOND DECREMENT BUTTON SECTION *********
     
     
@@ -1445,9 +1448,9 @@ def home():
     # CLOCK HOUR LABEL SECTION STARTS HERE
     hour_label_11 = customtkinter.CTkLabel(master=app,
                                          text="00",
-                                         text_font=("System", 15,BOLD),
-                                         bg_color="#F21350",
-                                         fg_color="gray",
+                                         text_font=("Arial", 15,BOLD),
+                                         bg_color="white",
+                                         fg_color="white",
                                          corner_radius=8,
                                          text_color="black",
                                           width=20,
@@ -1455,13 +1458,13 @@ def home():
                                         )
                                          
                                              
-    hour_label_11.place(x=1100,y=130)
+    hour_label_11.place(x=900,y=130)
     
     hour_label_22 = customtkinter.CTkLabel(master=app,
                                          text="00",
-                                         text_font=("System", 15,BOLD),
-                                         bg_color="#F21350",
-                                         fg_color="gray",
+                                         text_font=("Arial", 15,BOLD),
+                                         bg_color="white",
+                                         fg_color="white",
                                          corner_radius=8,
                                          text_color="black",
                                           width=20,
@@ -1469,13 +1472,13 @@ def home():
                                         )
                                          
                                              
-    hour_label_22.place(x=1100,y=260)
+    hour_label_22.place(x=900,y=260)
     
     hour_label_33 = customtkinter.CTkLabel(master=app,
                                          text="00",
-                                         text_font=("System", 15,BOLD),
-                                         bg_color="#F21350",
-                                         fg_color="gray",
+                                         text_font=("Arial", 15,BOLD),
+                                         bg_color="white",
+                                         fg_color="white",
                                          corner_radius=8,
                                          text_color="black",
                                           width=20,
@@ -1483,85 +1486,85 @@ def home():
                                         )
                                          
                                              
-    hour_label_33.place(x=1100,y=390)
+    hour_label_33.place(x=900,y=390)
     # ********** END OF CLOCK HOUR LABEL SECTION **********
     
     
     # CLOCK MINUTE LABEL SECTION STARTS HERE
     minute_label_11 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="#F21350",
-                                            fg_color="gray",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_color="black",
                                             width=20,
                                             height=10
                                             )
-    minute_label_11.place(x=1160,y=130)
+    minute_label_11.place(x=960,y=130)
     
     minute_label_22 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="#F21350",
-                                            fg_color="gray",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_color="black",
                                             width=20,
                                             height=10
                                             )
-    minute_label_22.place(x=1160,y=260)
+    minute_label_22.place(x=960,y=260)
     
     minute_label_33 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="#F21350",
-                                            fg_color="gray",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_color="black",
                                             width=20,
                                             height=10
                                             )
-    minute_label_33.place(x=1160,y=390)
+    minute_label_33.place(x=960,y=390)
     # ********** END OF CLOCK MINUTE LABEL SECTION **********
      
     
     # CLOCK SECOND LABEL SECTION STARTS HERE
     second_label_11 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="#F21350",
-                                            fg_color="gray",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_color="black",
                                             width=20,
                                             height=10
                                             )
-    second_label_11.place(x=1220,y=130)
+    second_label_11.place(x=1020,y=130)
     
     second_label_22 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="#F21350",
-                                            fg_color="gray",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_color="black",
                                             width=20,
                                             height=10
                                             )
-    second_label_22.place(x=1220,y=260)
+    second_label_22.place(x=1020,y=260)
     
     second_label_33 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("System", 15,BOLD),
-                                            bg_color="#F21350",
-                                            fg_color="gray",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
                                             corner_radius=8,
                                             text_color="black",
                                             width=20,
                                             height=10
                                             )
-    second_label_33.place(x=1220,y=390)
+    second_label_33.place(x=1020,y=390)
     
     
     
@@ -1584,7 +1587,7 @@ def home():
                                             command=increase_clock_hours_11
                                             )
                                             
-    inch_button_11.place(x=1100,y=100)
+    inch_button_11.place(x=905,y=100)
     
     inch_button_22 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1599,7 +1602,7 @@ def home():
                                             command=increase_clock_hours_22
                                             )
                                             
-    inch_button_22.place(x=1100,y=230)
+    inch_button_22.place(x=905,y=230)
     
     inch_button_33 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1614,7 +1617,7 @@ def home():
                                             command=increase_clock_hours_33
                                             )
                                             
-    inch_button_33.place(x=1100,y=360)
+    inch_button_33.place(x=905,y=360)
     # ********** END OF CLOCK HOUR INCREMENT BUTTON SECTION **********
     
     
@@ -1631,7 +1634,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_hours_11
                                             )
-    dech_button_11.place(x=1100,y=150)
+    dech_button_11.place(x=905,y=160)
     
     dech_button_22 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1645,7 +1648,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_hours_22
                                             )
-    dech_button_22.place(x=1100,y=280)
+    dech_button_22.place(x=905,y=290)
     
     dech_button_33 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1659,7 +1662,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_hours_33
                                             )
-    dech_button_33.place(x=1100,y=410)
+    dech_button_33.place(x=905,y=420)
     # ********** END OF CLOCK HOUR DECREMENT BUTTON SECTION **********
     
     # CLOCK MINUTE INCREMENT BUTTON SECTION STARTS HERE
@@ -1675,7 +1678,7 @@ def home():
                                             #height=10,
                                             command=increase_clock_minutes_11
                                             )
-    incm_button_11.place(x=1160,y=100)
+    incm_button_11.place(x=965,y=100)
     
     incm_button_22 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1689,7 +1692,7 @@ def home():
                                             #height=10,
                                             command=increase_clock_minutes_22
                                             )
-    incm_button_22.place(x=1160,y=230)
+    incm_button_22.place(x=965,y=230)
     
     incm_button_33 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1703,7 +1706,7 @@ def home():
                                             #height=10,
                                             command=increase_clock_minutes_33
                                             )
-    incm_button_33.place(x=1160,y=360)
+    incm_button_33.place(x=965,y=360)
     # ********** END OF CLOCK MINUTE INCREMENT BUTTON SECTION **********
     
 
@@ -1720,7 +1723,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_minutes_11
                                             )
-    decm_button_11.place(x=1160,y=150)
+    decm_button_11.place(x=965,y=160)
     
     decm_button_22 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1734,7 +1737,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_minutes_22
                                             )
-    decm_button_22.place(x=1160,y=280)
+    decm_button_22.place(x=965,y=290)
     
     decm_button_33 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1748,7 +1751,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_minutes_33
                                             )
-    decm_button_33.place(x=1160,y=410)
+    decm_button_33.place(x=965,y=420)
     # ********** END OF CLOCK MINUTE DECREMENT BUTTON SECTION *********
     
     
@@ -1765,7 +1768,7 @@ def home():
                                             #height=10,
                                             command=increase_clock_seconds_11
                                             )
-    incs_button_11.place(x=1220,y=100)
+    incs_button_11.place(x=1025,y=100)
     
     incs_button_22 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1779,7 +1782,7 @@ def home():
                                             #height=10,
                                             command=increase_clock_seconds_22
                                             )
-    incs_button_22.place(x=1220,y=230)
+    incs_button_22.place(x=1025,y=230)
     
     incs_button_33 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1793,7 +1796,7 @@ def home():
                                             #height=10,
                                             command=increase_clock_seconds_33
                                             )
-    incs_button_33.place(x=1220,y=360)
+    incs_button_33.place(x=1025,y=360)
     # ********** END OF CLOCK SECOND INCREMENT BUTTON SECTION **********
     
     
@@ -1810,7 +1813,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_seconds_11
                                             )
-    decs_button_11.place(x=1220,y=150)
+    decs_button_11.place(x=1025,y=160)
     
     decs_button_22 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1824,7 +1827,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_seconds_22
                                             )
-    decs_button_22.place(x=1220,y=280)
+    decs_button_22.place(x=1025,y=290)
     
     decs_button_33 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -1838,7 +1841,7 @@ def home():
                                             #height=10,
                                             command=decrease_clock_seconds_33
                                             )
-    decs_button_33.place(x=1220,y=410)
+    decs_button_33.place(x=1025,y=420)
     # ********** END OF CLOCK SECOND DECREMENT BUTTON SECTION *********
 
     # QUIT BUTTON SECTION STARTS HERE
@@ -1848,32 +1851,98 @@ def home():
                                             hover_color="#3A3A3A",
                                             fg_color="black",
                                             corner_radius=8,
-                                            text_font=("System", 15,BOLD),
+                                            text_font=("Arial", 15,BOLD),
                                             command=quit)
     quit_button.place(x=1250,y=10)
     
     # ********** END OF QUIT BUTTON SECTION **********
     
+    # Frame for the SCHEDULE LABEL at the bottom of the screen
+    schedule_frame = customtkinter.CTkFrame(master=app,
+                                            width=900,
+                                            height=230,
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8)
+    schedule_frame.place(x=10,y=500)
+    
+    # LABEL FOR THE SCHEDULE/NOT SCHEDULED
+    first_label_1 = customtkinter.CTkLabel(master=schedule_frame,
+                                            text="1. ",
+                                            text_color="black",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8)
+    first_label_1.place(x=0,y=30)
+    
+    second_label_2 = customtkinter.CTkLabel(master=schedule_frame,
+                                            text="2. ",
+                                            text_color="black",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8)
+    second_label_2.place(x=0,y=90)
+    
+    third_label_3 = customtkinter.CTkLabel(master=schedule_frame,
+                                            text="3. ",
+                                            text_color="black", 
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8)
+    third_label_3.place(x=0,y=150)
+    
+    
+
+    
+    first_label_11 = customtkinter.CTkLabel(master=schedule_frame,
+                                            text="NOT SCHEDULED",
+                                            text_color="black",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8)
+    first_label_11.place(x=90,y=30)
+    
+    second_label_11 = customtkinter.CTkLabel(master=schedule_frame,
+                                            text="NOT SCHEDULED",
+                                            text_color="black",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8)
+    second_label_11.place(x=90,y=90)
+    
+    third_label_11 = customtkinter.CTkLabel(master=schedule_frame, 
+                                            text="NOT SCHEDULED",
+                                            text_color="black", 
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8)
+    third_label_11.place(x=90,y=150)
+    # ********** END OF SCHEDULE LABEL SECTION **********
+    
     
     
 # Creating the Splash Screen
-frame1=customtkinter.CTkFrame(master=app,           # Creating the frame for the splash screen
-                              width=240,
-                              corner_radius=20,
-                              fg_color="white")
-frame1.place(x=0 ,y=0,width=1366,height=768)
-logo=ImageTk.PhotoImage(Image.open("Elements\\iub_logo_1.png"))  # Importing the logo
-label_photo= customtkinter.CTkLabel(master=frame1,image=logo)
-label_photo.pack()
+frame_video=customtkinter.CTkFrame(master=app,width=240,corner_radius=20,fg_color="white")
+frame_video.place(x=0, y=0, width=1366, height=768)
+videoplayer = TkinterVideo(frame_video, scaled=True)
+videoplayer.load(r'Elements\welcome_video.mp4')
+videoplayer.pack(expand=True, fill="both")
+videoplayer.play()
 
-app.after(3000,frame1.destroy)    # Destroying the splash screen after 3 seconds
+app.after(3000,frame_video.destroy)    # Destroying the splash screen after 3 seconds
 app.after(3000,home)              # Calling the home function after 3 seconds
-alarm_on_1()                      # Calling the alarm_on_1 function after 3 seconds
-alarm_off_1()                     # Calling the alarm_off_1 function after 3 seconds
-alarm_on_2()                      # Calling the alarm_on_2 function after 3 seconds
-alarm_off_2()                     # Calling the alarm_off_2 function after 3 seconds
-alarm_on_3()                      # Calling the alarm_on_3 function after 3 seconds
-alarm_off_3()                     # Calling the alarm_off_3 function after 3 seconds
+# alarm_on_1()                      # Calling the alarm_on_1 function after 3 seconds
+# alarm_off_1()                     # Calling the alarm_off_1 function after 3 seconds
+# alarm_on_2()                      # Calling the alarm_on_2 function after 3 seconds
+# alarm_off_2()                     # Calling the alarm_off_2 function after 3 seconds
+# alarm_on_3()                      # Calling the alarm_on_3 function after 3 seconds
+# alarm_off_3()                     # Calling the alarm_off_3 function after 3 seconds
 
 
 
