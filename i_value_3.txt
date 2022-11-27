@@ -1,3 +1,3 @@
-1: 10
-Starting Time: 19:00:00
-Ending Time: 19:05:00
+1: 0
+Starting Time: 00:00:00
+Ending Time: 00:00:00

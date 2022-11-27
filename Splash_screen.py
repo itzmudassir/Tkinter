@@ -166,6 +166,21 @@ def submit_1():
         file.write(str(s11)+"\n")
                
     file.close()
+    
+    file = open("i_value_1.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[0][0]
+    if modified == "1":
+        first_label_11.configure(text="SCHEDULED")
+        first_label_11.configure(text_color="white")
+        
+    else:
+        first_label_11.configure(text="NON-SCHEDULED")
+        first_label_11.configure(text_color="black")
+       
 
         
 def submit_2():
@@ -198,6 +213,20 @@ def submit_2():
         file.write(str(s22)+"\n")
     file.close()
     
+    file = open("i_value_2.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[0][0]
+    if modified == "1":
+        second_label_11.configure(text="SCHEDULED")
+        second_label_11.configure(text_color="white")
+        
+    else:
+        second_label_11.configure(text="NON-SCHEDULED")
+        second_label_11.configure(text_color="black")
+    
        
 def submit_3():
     file = open("i_value_3.txt","w")
@@ -228,6 +257,21 @@ def submit_3():
     else:
         file.write(str(s33)+"\n")
     file.close()
+    
+    file = open("i_value_3.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[0][0]
+    if modified == "1":
+        third_label_11.configure(text="SCHEDULED")
+        third_label_11.configure(text_color="white")
+        
+    else:
+        third_label_11.configure(text="NON-SCHEDULED")
+        third_label_11.configure(text_color="black")
+    
 # Submit Button Functions Ends Here
 
 # Clock Hours INCREMENT functions Starts Here
@@ -710,6 +754,10 @@ def alarm_off_3():
     app.after(1000, alarm_off_3)
 # Alarm OFF Function Ends Here
 
+
+        
+
+
 # Main Function to run the program      
 def home():
     global i 
@@ -808,6 +856,10 @@ def home():
     global hour_label_33  # Making the third hour_label global
     global minute_label_33  # Making the third minute_label global
     global second_label_33  # Making the third second_label global
+    
+    global first_label_11  # Making the first_label_11 global
+    global second_label_11  # Making the second_label_11 global
+    global third_label_11  # Making the third_label_11 global
     
     
     
@@ -1898,29 +1950,29 @@ def home():
 
     
     first_label_11 = customtkinter.CTkLabel(master=schedule_frame,
-                                            text="NOT SCHEDULED",
+                                            text="NON-SCHEDULED",
                                             text_color="black",
                                             text_font=("Arial", 15,BOLD),
                                             bg_color="white",
-                                            fg_color="white",
+                                            fg_color="red",
                                             corner_radius=8)
     first_label_11.place(x=90,y=30)
     
     second_label_11 = customtkinter.CTkLabel(master=schedule_frame,
-                                            text="NOT SCHEDULED",
+                                            text="NON-SCHEDULED",
                                             text_color="black",
                                             text_font=("Arial", 15,BOLD),
                                             bg_color="white",
-                                            fg_color="white",
+                                            fg_color="red",
                                             corner_radius=8)
     second_label_11.place(x=90,y=90)
     
     third_label_11 = customtkinter.CTkLabel(master=schedule_frame, 
-                                            text="NOT SCHEDULED",
+                                            text="NON-SCHEDULED",
                                             text_color="black", 
                                             text_font=("Arial", 15,BOLD),
                                             bg_color="white",
-                                            fg_color="white",
+                                            fg_color="red",
                                             corner_radius=8)
     third_label_11.place(x=90,y=150)
     # ********** END OF SCHEDULE LABEL SECTION **********
@@ -1943,6 +1995,8 @@ app.after(3000,home)              # Calling the home function after 3 seconds
 # alarm_off_2()                     # Calling the alarm_off_2 function after 3 seconds
 # alarm_on_3()                      # Calling the alarm_on_3 function after 3 seconds
 # alarm_off_3()                     # Calling the alarm_off_3 function after 3 seconds
+
+
 
 
 
