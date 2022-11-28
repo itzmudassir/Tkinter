@@ -14,13 +14,30 @@ app.title("IUB Management System")
 app.configure(bg="white")
 
 
+# Creating a Frame for title
+title_frame = customtkinter.CTkFrame(master = app,
+                                         fg_color = "white",
+                                         border_color = "white",
+                                         border_width = 1,
+                                         width = 550,
+                                         height = 70)
+title_frame.place(x = 420, y = 10)
+    
+    # Creating the title of the window
+title1=customtkinter.CTkLabel(master=title_frame,
+                                  text="ꜱᴄʜᴇᴅᴜʟɪɴɢ ",
+                                  text_font=("Arial", 40, "bold"),
+                                  text_color="#2A2A9C")
+title1.place(x=28, y=1)
+
+title2=customtkinter.CTkLabel(master=title_frame,
+                                  text="ꜱʏꜱᴛᴇᴍ",
+                                  text_font=("Arial", 40, "bold"),
+                                  text_color="black")
+title2.place(x=330, y=1)
 
 
-title1=customtkinter.CTkLabel(master=app,
-                                  text="Tech IQ Smart Packing System",
-                                  text_font=("Arial", -42,BOLD),
-                                  text_color="#08A1FF")
-title1.place(x=440,y=10)
+
 
 
 quit_button = customtkinter.CTkButton(master=app,

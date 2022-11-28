@@ -863,13 +863,28 @@ def home():
     
     
     
-    # Creating the title of the window
-    title1=customtkinter.CTkLabel(master=app,
-                                  text="ꜱᴄʜᴇᴅᴜʟɪɴɢ ꜱʏꜱᴛᴇᴍ",
-                                  text_font=("Arial", 40, "bold"),
-                                  text_color="#0D9986")
-    title1.place(x=440,y=10)
-    
+    # Creating a Frame for title
+    title_frame = customtkinter.CTkFrame(master = app,
+                                            fg_color = "white",
+                                            border_color = "white",
+                                            border_width = 1,
+                                            width = 550,
+                                            height = 70)
+    title_frame.place(x = 420, y = 10)
+        
+        # Creating the title of the window
+    title1=customtkinter.CTkLabel(master=title_frame,
+                                    text="ꜱᴄʜᴇᴅᴜʟɪɴɢ ",
+                                    text_font=("Arial", 40, "bold"),
+                                    text_color="#2A2A9C")
+    title1.place(x=28, y=1)
+
+    title2=customtkinter.CTkLabel(master=title_frame,
+                                    text="ꜱʏꜱᴛᴇᴍ",
+                                    text_font=("Arial", 40, "bold"),
+                                    text_color="black")
+    title2.place(x=330, y=1)
+        
     # IMAGE SECTION STARTS HERE
     
     # Define our images
@@ -883,18 +898,27 @@ def home():
     checkbox_1 = customtkinter.CTkCheckBox(master=app,
                                            command=checkbox_event_1,
                                            variable=var1,
+                                           hover_color = "#2A2A9C",
+                                           fg_color = "#2A2A9C",
+                                           border_color = "black",
                                            onvalue=1,
                                            offvalue=0)                    
     checkbox_1.place(x=10, y = 130)
     
     checkbox_2 = customtkinter.CTkCheckBox(master=app, command=checkbox_event_2,
                                            variable=var2,
+                                           hover_color = "#2A2A9C",
+                                           fg_color = "#2A2A9C",
+                                           border_color = "black",
                                            onvalue=1,
                                            offvalue=0)                    
     checkbox_2.place(x=10, y = 260)
     
     checkbox_3 = customtkinter.CTkCheckBox(master=app, command=checkbox_event_3,
                                            variable=var3,
+                                           hover_color = "#2A2A9C",
+                                           fg_color = "#2A2A9C",
+                                           border_color = "black",
                                            onvalue=1,
                                            offvalue=0)                    
     checkbox_3.place(x=10, y = 390)
@@ -1025,7 +1049,7 @@ def home():
                                          bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
-                                         text_color="black",
+                                         text_color="#2A2A9C",
                                         #  width=20,
                                         #  height=10
                                         )
@@ -1039,7 +1063,7 @@ def home():
                                          bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
-                                         text_color="black",
+                                         text_color="#2A2A9C",
                                         #  width=20,
                                         #  height=10
                                         )
@@ -1049,11 +1073,11 @@ def home():
     
     value_label_3 = customtkinter.CTkLabel(master=app,
                                          text="0",
-                                         text_font=("Arial", 15,BOLD),
+                                         text_font=("Arial", 18,BOLD),
                                          bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
-                                         text_color="black",
+                                         text_color="#2A2A9C",
                                         #  width=20,
                                         #  height=10
                                         )
@@ -1065,9 +1089,9 @@ def home():
     # SUBMIT BUTTON SECTION STARTS HERE
     sub_button_1 = customtkinter.CTkButton(master=app,
                                             text="ꜱᴜʙᴍɪᴛ",
-                                            text_color="black",
+                                            text_color="white",
                                             hover_color="blue",
-                                            fg_color="#08ECFF",
+                                            fg_color="#2A2A9C",
                                             corner_radius=8,
                                             text_font=("Arial", 15,BOLD),
                                             command=submit_1)
@@ -1075,9 +1099,9 @@ def home():
     
     sub_button_2 = customtkinter.CTkButton(master=app,
                                             text="ꜱᴜʙᴍɪᴛ",
-                                            text_color="black",
+                                            text_color="white",
                                             hover_color="blue",
-                                            fg_color="#08ECFF",
+                                            fg_color="#2A2A9C",
                                             corner_radius=8,
                                             text_font=("Arial", 15,BOLD),
                                             command=submit_2)
@@ -1086,9 +1110,9 @@ def home():
  
     sub_button_3 = customtkinter.CTkButton(master=app,
                                             text="ꜱᴜʙᴍɪᴛ",
-                                            text_color="black",
+                                            text_color="white",
                                             hover_color="blue",
-                                            fg_color="#08ECFF",
+                                            fg_color="#2A2A9C",
                                             corner_radius=8,
                                             text_font=("Arial", 15,BOLD),
                                             command=submit_3)
@@ -1096,14 +1120,14 @@ def home():
     # ********** END OF SUBMIT BUTTON SECTION **********
     
     # CREATING A CLOCK
-    # CLOCK HOUR LABEL SECTION STARTS HERE
+    # CLOCK HOUR LABEL SECTION STARTS#2A2A9C
     hour_label_1 = customtkinter.CTkLabel(master=app,
                                          text="00",
                                          text_font=("Arial", 15,BOLD),
                                          bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
-                                         text_color="black",
+                                         text_color="#2A2A9C",
                                           width=20,
                                           height=10
                                         )
@@ -1117,7 +1141,7 @@ def home():
                                          bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
-                                         text_color="black",
+                                         text_color="#2A2A9C",
                                           width=20,
                                           height=10
                                         )
@@ -1131,7 +1155,7 @@ def home():
                                          bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
-                                         text_color="black",
+                                         text_color="#2A2A9C",
                                           width=20,
                                           height=10
                                         )
@@ -1148,7 +1172,7 @@ def home():
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
-                                            text_color="black",
+                                            text_color="#2A2A9C",
                                             width=20,
                                             height=10
                                             )
@@ -1160,7 +1184,7 @@ def home():
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
-                                            text_color="black",
+                                            text_color="#2A2A9C",
                                             width=20,
                                             height=10
                                             )
@@ -1172,7 +1196,7 @@ def home():
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
-                                            text_color="black",
+                                            text_color="#2A2A9C",
                                             width=20,
                                             height=10
                                             )
@@ -1187,7 +1211,7 @@ def home():
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
-                                            text_color="black",
+                                            text_color="#2A2A9C",
                                             width=20,
                                             height=10
                                             )
@@ -1199,7 +1223,7 @@ def home():
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
-                                            text_color="black",
+                                            text_color="#2A2A9C",
                                             width=20,
                                             height=10
                                             )
@@ -1211,7 +1235,7 @@ def home():
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
-                                            text_color="black",
+                                            text_color="#2A2A9C",
                                             width=20,
                                             height=10
                                             )
@@ -1504,7 +1528,7 @@ def home():
                                          bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
-                                         text_color="black",
+                                         text_color="#2A2A9C",
                                           width=20,
                                           height=10
                                         )
@@ -1518,7 +1542,7 @@ def home():
                                          bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
-                                         text_color="black",
+                                         text_color="#2A2A9C",
                                           width=20,
                                           height=10
                                         )
@@ -1532,7 +1556,7 @@ def home():
                                          bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
-                                         text_color="black",
+                                         text_color="#2A2A9C",
                                           width=20,
                                           height=10
                                         )
@@ -1549,7 +1573,7 @@ def home():
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
-                                            text_color="black",
+                                            text_color="#2A2A9C",
                                             width=20,
                                             height=10
                                             )
@@ -1561,7 +1585,7 @@ def home():
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
-                                            text_color="black",
+                                            text_color="#2A2A9C",
                                             width=20,
                                             height=10
                                             )
@@ -1573,7 +1597,7 @@ def home():
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
-                                            text_color="black",
+                                            text_color="#2A2A9C",
                                             width=20,
                                             height=10
                                             )
@@ -1588,7 +1612,7 @@ def home():
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
-                                            text_color="black",
+                                            text_color="#2A2A9C",
                                             width=20,
                                             height=10
                                             )
@@ -1600,7 +1624,7 @@ def home():
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
-                                            text_color="black",
+                                            text_color="#2A2A9C",
                                             width=20,
                                             height=10
                                             )
@@ -1612,7 +1636,7 @@ def home():
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
-                                            text_color="black",
+                                            text_color="#2A2A9C",
                                             width=20,
                                             height=10
                                             )
@@ -1901,7 +1925,7 @@ def home():
                                             text="X",
                                             text_color="white",
                                             hover_color="#3A3A3A",
-                                            fg_color="black",
+                                            fg_color="red",
                                             corner_radius=8,
                                             text_font=("Arial", 15,BOLD),
                                             command=quit)
