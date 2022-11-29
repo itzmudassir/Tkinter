@@ -155,12 +155,18 @@ def home():
 
     time_label.place(x=10, y=10)
   
-    # # Clock Image
-    # clock_image_button = customtkinter.CTkButton(master=app,
-    #                                               image=clock,
-    #                                               bg_color="white",
-    #                                               border_width=0)
-    # clock_image_button.place(x=10, y=70)
+    # Clock Image
+    clock_image_button = customtkinter.CTkButton(master=app,
+                                                  text = "",
+                                                  fg_color = "white",
+                                                  hover_color = "white",
+                                                  text_color = "white",
+                                                  bg_color = "white",
+                                                  image = clock,
+                                                  width = 10,
+                                                  height = 1
+                                                  )
+    clock_image_button.place(x=210, y=20)
     # TIME SECTION ENDS HERE
 
     # Creating the title of the window
