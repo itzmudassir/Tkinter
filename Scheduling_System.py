@@ -191,6 +191,36 @@ def home():
     checkbox_3.place(x=10, y = 415)
     # ********** END OF CHECKBOX SECTION **********
     
+    # CHECKBOX LABEL SECTION STARTS HERE
+    label_1 = customtkinter.CTkLabel(master=app,
+                                      text="Non Active",
+                                      text_font=("Arial", 15, "bold"),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
+                                      text_color="white")
+                                      
+    label_1.place(x=40,y=153)
+    
+    label_2=customtkinter.CTkLabel(master=app,
+                                      text="Non Active",
+                                      text_font=("Arial", 15, "bold"),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
+                                      text_color="white")
+    label_2.place(x=40,y=283)
+    
+    label_3 = customtkinter.CTkLabel(master=app,
+                                      text="Non Active",
+                                      text_font=("Arial", 15, "bold"),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
+                                      text_color="white")
+    label_3.place(x=40,y=413)
+    # ********** END OF CHECKBOX LABEL SECTION **********
+    
     
     
 # Calling the home function
