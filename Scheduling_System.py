@@ -233,7 +233,7 @@ def home():
                                             #command=increase_clock_hours_1
                                             )
                                             
-    inch_button_1.place(x=420,y=110)
+    inch_button_1.place(x=420,y=112)
     
     incm_button_1 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -244,7 +244,7 @@ def home():
                                             width=30,
                                             #command=increase_clock_minutes_1
                                             )
-    incm_button_1.place(x=480,y=110)
+    incm_button_1.place(x=480,y=112)
     
     incs_button_1 = customtkinter.CTkButton(master=app,
                                             text="",
@@ -255,7 +255,7 @@ def home():
                                             width=30,
                                             #command=increase_clock_seconds_1
                                             )
-    incs_button_1.place(x=540,y=110)
+    incs_button_1.place(x=540,y=112)
     
     
     hour_label_1 = customtkinter.CTkLabel(master=app,
@@ -295,6 +295,148 @@ def home():
                                             height=10
                                             )
     second_label_1.place(x=536,y=153)
+    
+    dech_button_1 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #height=10,
+                                            #command=decrease_clock_hours_1
+                                            )
+    dech_button_1.place(x=420,y=186)
+    
+    decm_button_1 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #command=decrease_clock_minutes_1
+                                            )
+    decm_button_1.place(x=480,y=186)
+    
+    decs_button_1 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #command=decrease_clock_seconds_1
+                                            )
+    decs_button_1.place(x=540,y=186)
+    # ********** END OF FIRST ROW TIME BUTTONS & LABELS **********
+    
+    # Second Row Time Buttons & Labels
+    inch_button_2 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #command=increase_clock_hours_2
+                                            )                                       
+    inch_button_2.place(x=420,y=240)
+    
+    incm_button_2 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #command=increase_clock_minutes_2
+                                            )
+    incm_button_2.place(x= 480,y=240)
+    
+    incs_button_2 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #command=increase_clock_seconds_2
+                                            )
+    incs_button_2.place(x=540,y=240)
+    
+    
+    hour_label_2 = customtkinter.CTkLabel(master=app,
+                                         text="00",
+                                         text_font=("Arial", 20,BOLD),
+                                         bg_color="white",
+                                         fg_color="white",
+                                         corner_radius=8,
+                                         text_color="#2A2A9C",
+                                          width=20,
+                                          height=10
+                                        )
+                                                                        
+    hour_label_2.place(x=416,y=281)
+    
+    minute_label_2 = customtkinter.CTkLabel(master=app,
+                                            text="00",
+                                            text_font=("Arial", 20,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            text_color="#2A2A9C",
+                                            width=20,
+                                            height=10
+                                            )
+    minute_label_2.place(x=476,y=281)
+    
+    second_label_2 = customtkinter.CTkLabel(master=app,
+                                            text="00",
+                                            text_font=("Arial", 20,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            text_color="#2A2A9C",   
+                                            width=20,
+                                            height=10
+                                            )
+    second_label_2.place(x=536,y=281)
+    
+    dech_button_2 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #command=decrease_clock_hours_2
+                                            )
+    dech_button_2.place(x=420,y=314)
+    
+    decm_button_2 = customtkinter.CTkButton(master=app,
+                                            text="",    
+                                            image=down_arrow,
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #command=decrease_clock_minutes_2
+                                            )
+    decm_button_2.place(x=480,y=314)
+    
+    decs_button_2 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=down_arrow,
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #command=decrease_clock_seconds_2
+                                            )
+    decs_button_2.place(x=540,y=314)
+
+    
     
     
     # QUIT BUTTON SECTION STARTS HERE
