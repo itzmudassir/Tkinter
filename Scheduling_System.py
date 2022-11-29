@@ -654,8 +654,8 @@ def alarm_on_2():
     current_time = current_time.split(":")
     print(current_time)
     if modified[0] == "1" and modified_1[0]==current_time[0] and modified_1[1]==current_time[1] and modified_1[2]==current_time[2]:
-        print("GPIO 1 ON")
-        light_off_b_1 = customtkinter.CTkButton(master=schedule_frame,
+        print("GPIO 2 ON")
+        light_off_b_2 = customtkinter.CTkButton(master=schedule_frame,
                                        text = "",
                                         fg_color = "white",
                                         hover_color = "white",
@@ -664,7 +664,7 @@ def alarm_on_2():
                                         image = light_on,
                                         width = 10,
                                         height = 1)
-        light_off_b_1.place(x=300,y=23)
+        light_off_b_2.place(x=300,y=83)
     else:
         print("")
     app.after(1000, alarm_on_2)
@@ -758,8 +758,8 @@ def alarm_on_3():
     current_time = current_time.split(":")
     print(current_time)
     if modified[0] == "1" and modified_1[0]==current_time[0] and modified_1[1]==current_time[1] and modified_1[2]==current_time[2]:
-        print("GPIO 1 ON")
-        light_off_b_1 = customtkinter.CTkButton(master=schedule_frame,
+        print("GPIO 3 ON")
+        light_off_b_3 = customtkinter.CTkButton(master=schedule_frame,
                                        text = "",
                                         fg_color = "white",
                                         hover_color = "white",
@@ -768,7 +768,7 @@ def alarm_on_3():
                                         image = light_on,
                                         width = 10,
                                         height = 1)
-        light_off_b_1.place(x=300,y=23)
+        light_off_b_3.place(x=300,y=143)
     else:
         print("")
     app.after(1000, alarm_on_3)
