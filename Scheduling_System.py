@@ -419,7 +419,146 @@ def decrease_clock_seconds_33():
         second_label_33.configure(text=s33)
         if s33<10:
             second_label_33.configure(text="0"+str(s33))
-# Clock Seconds DECREMENT functions Ends Her
+# Clock Seconds DECREMENT functions Ends Here
+
+# Submit Button Functions Starts Here            
+def submit_1():
+    file = open("i_value_1.txt","w")
+    file.write(str(var1.get())+": "+str(i)+"\n"+"Starting Time: ")
+    if h1<10:
+        file.write("0"+str(h1)+":")
+    else:
+        file.write(str(h1)+":")
+    if m1<10:
+        file.write("0"+str(m1)+":")
+    else:
+        file.write(str(m1)+":")
+    if s1<10:
+        file.write("0"+str(s1)+"\n")
+    else:
+        file.write(str(s1)+"\n")
+    file.write("Ending Time: ") 
+    if h11<10:
+        file.write("0"+str(h11)+":")
+    else:
+        file.write(str(h11)+":")
+    if m11<10:
+        file.write("0"+str(m11)+":")
+    else:
+        file.write(str(m11)+":")
+    if s11<10:
+        file.write("0"+str(s11)+"\n")
+    else:
+        file.write(str(s11)+"\n")
+               
+    file.close()
+    
+    file = open("i_value_1.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[0][0]
+    if modified == "1":
+        schedule_label_1.configure(text="SCHEDULED")
+        schedule_label_1.configure(text_color="white")
+        
+    else:
+        schedule_label_1.configure(text="NON-SCHEDULED")
+        schedule_label_1.configure(text_color="black")
+       
+
+        
+def submit_2():
+    file = open("i_value_2.txt","w")
+    file.write(str(var2.get())+": "+str(j)+"\n"+"Starting Time: ")
+    if h2<10:
+        file.write("0"+str(h2)+":")
+    else:
+        file.write(str(h2)+":")
+    if m2<10:
+        file.write("0"+str(m2)+":")
+    else:
+        file.write(str(m2)+":")
+    if s2<10:
+        file.write("0"+str(s2)+"\n")
+    else:
+        file.write(str(s2)+"\n")
+    file.write("Ending Time: ")
+    if h22<10:
+        file.write("0"+str(h22)+":")
+    else:
+        file.write(str(h22)+":")
+    if m22<10:
+        file.write("0"+str(m22)+":")
+    else:
+        file.write(str(m22)+":")
+    if s22<10:
+        file.write("0"+str(s22)+"\n")
+    else:
+        file.write(str(s22)+"\n")
+    file.close()
+    
+    file = open("i_value_2.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[0][0]
+    if modified == "1":
+        schedule_label_2.configure(text="SCHEDULED")
+        schedule_label_2.configure(text_color="white")
+        
+    else:
+        schedule_label_2.configure(text="NON-SCHEDULED")
+        schedule_label_2.configure(text_color="black")
+    
+       
+def submit_3():
+    file = open("i_value_3.txt","w")
+    file.write(str(var3.get())+": "+str(k)+"\n"+"Starting Time: ")
+    if h3<10:
+        file.write("0"+str(h3)+":")
+    else:
+        file.write(str(h3)+":")
+    if m3<10:
+        file.write("0"+str(m3)+":")
+    else:
+        file.write(str(m3)+":")
+    if s3<10:
+        file.write("0"+str(s3)+"\n")
+    else:
+        file.write(str(s3)+"\n")
+    file.write("Ending Time: ")
+    if h33<10:
+        file.write("0"+str(h33)+":")
+    else:
+        file.write(str(h33)+":")
+    if m33<10:
+        file.write("0"+str(m33)+":")
+    else:
+        file.write(str(m33)+":")
+    if s33<10:
+        file.write("0"+str(s33)+"\n")
+    else:
+        file.write(str(s33)+"\n")
+    file.close()
+    
+    file = open("i_value_3.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[0][0]
+    if modified == "1":
+        schedule_label_3.configure(text="SCHEDULED")
+        schedule_label_3.configure(text_color="white")
+        
+    else:
+        schedule_label_3.configure(text="NON-SCHEDULED")
+        schedule_label_3.configure(text_color="black")
+    
+# Submit Button Functions Ends Here
 
 def home():
     # Globalizing the variables
