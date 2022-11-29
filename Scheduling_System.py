@@ -98,6 +98,329 @@ def checkbox_event_3():
         
 # CHECKBOXES FUNCTIONS ENDS HERE
 
+# Clock Hours INCREMENT functions Starts Here
+def increase_clock_hours_1():
+    global h1
+    if h1<=23:
+        h1 = h1 + 1
+        hour_label_1.configure(text=h1)
+        if h1<10:
+            hour_label_1.configure(text="0"+str(h1))
+        
+def increase_clock_hours_2():
+    global h2
+    if h2<=23:
+        h2 = h2 + 1
+        hour_label_2.configure(text=h2)
+        if h2<10:
+            hour_label_2.configure(text="0"+str(h2))
+        
+def increase_clock_hours_3():
+    global h3
+    if h3<=23:
+        h3 = h3 + 1
+        hour_label_3.configure(text=h3)
+        if h3<10:
+            hour_label_3.configure(text="0"+str(h3))
+# Clock Hours INCREMENT functions Ends Here
+        
+              
+# Clock Hours DECREMENT functions Starts Here
+def decrease_clock_hours_1():
+    global h1
+    if h1>=1:
+        h1 = h1 - 1
+        hour_label_1.configure(text=h1)
+        if h1<10:
+            hour_label_1.configure(text="0"+str(h1))
+        
+def decrease_clock_hours_2():
+    global h2
+    if h2>=1:
+        h2 = h2 - 1
+        hour_label_2.configure(text=h2)
+        if h2<10:
+            hour_label_2.configure(text="0"+str(h2))
+        
+def decrease_clock_hours_3():
+    global h3
+    if h3>=1:
+        h3 = h3 - 1
+        hour_label_3.configure(text=h3)
+        if h3<10:
+            hour_label_3.configure(text="0"+str(h3))
+# Clock Hours DECREMENT functions Ends Here
+    
+     
+ # Clock Minutes INCREMENT functions Starts Here
+def increase_clock_minutes_1():
+    global m1
+    if m1<=59:
+        m1 = m1 + 1
+        minute_label_1.configure(text=m1)
+        if m1<10:
+            minute_label_1.configure(text="0"+str(m1))
+        
+def increase_clock_minutes_2():
+    global m2
+    if m2<=59:
+        m2 = m2 + 1
+        minute_label_2.configure(text=m2)
+        if m2<10:
+            minute_label_2.configure(text="0"+str(m2))
+        
+def increase_clock_minutes_3():
+    global m3
+    if m3<=59:
+        m3 = m3 + 1
+        minute_label_3.configure(text=m3)
+        if m3<10:
+            minute_label_3.configure(text="0"+str(m3))
+# Clock Minutes INCREMENT functions Ends Here
+        
+        
+# Clock Minutes DECREMENT functions Starts Here
+def decrease_clock_minutes_1():
+    global m1    
+    if m1>=1:
+        m1 = m1 - 1
+        minute_label_1.configure(text=m1)
+        if m1<10:
+            minute_label_1.configure(text="0"+str(m1))
+        
+def decrease_clock_minutes_2():
+    global m2
+    if m2>=1:
+        m2 = m2 - 1
+        minute_label_2.configure(text=m2)
+        if m2<10:
+            minute_label_2.configure(text="0"+str(m2))
+        
+def decrease_clock_minutes_3():
+    global m3
+    if m3>=1:
+        m3 = m3 - 1
+        minute_label_3.configure(text=m3)
+        if m3<10:
+            minute_label_3.configure(text="0"+str(m3))
+# Clock Minutes DECREMENT functions Ends Here
+        
+        
+        
+# Clock Seconds INCREMENT functions Starts Here
+def increase_clock_seconds_1():
+    global s1
+    if s1<=59:
+        s1 = s1 + 1
+        second_label_1.configure(text=s1)
+        if s1<10:
+            second_label_1.configure(text="0"+str(s1))
+        
+def increase_clock_seconds_2():
+    global s2
+    if s2<=59:
+        s2 = s2 + 1
+        second_label_2.configure(text=s2)
+        if s2<10:
+            second_label_2.configure(text="0"+str(s2))
+        
+def increase_clock_seconds_3():
+    global s3
+    if s3<=59:
+        s3 = s3 + 1
+        second_label_3.configure(text=s3)
+        if s3<10:
+            second_label_3.configure(text="0"+str(s3))
+# Clock Seconds INCREMENT functions Ends Here
+          
+        
+# Clock Seconds DECREMENT functions Starts Here
+def decrease_clock_seconds_1():
+    global s1
+    if s1>=1:
+        s1 = s1 - 1
+        second_label_1.configure(text=s1)
+        if s1<10:
+            second_label_1.configure(text="0"+str(s1))
+        
+def decrease_clock_seconds_2():
+    global s2
+    if s2>=1:
+        s2 = s2 - 1
+        second_label_2.configure(text=s2)
+        if s2<10:
+            second_label_2.configure(text="0"+str(s2))
+def decrease_clock_seconds_3():
+    global s3
+    if s3>=1:
+        s3 = s3 - 1
+        second_label_3.configure(text=s3)
+        if s3<10:
+            second_label_3.configure(text="0"+str(s3))
+# Clock Seconds DECREMENT functions Ends Here
+
+
+# Second Clock Hours INCREMENT functions Starts Here
+def increase_clock_hours_11():
+    global h11
+    if h11<=23:
+        h11 = h11 + 1
+        hour_label_11.configure(text=h11)
+        if h11<10:
+            hour_label_11.configure(text="0"+str(h11))
+        
+def increase_clock_hours_22():
+    global h22
+    if h22<=23:
+        h22 = h22 + 1
+        hour_label_22.configure(text=h22)
+        if h22<10:
+            hour_label_22.configure(text="0"+str(h22))
+        
+def increase_clock_hours_33():
+    global h33
+    if h33<=23:
+        h33 = h33 + 1
+        hour_label_33.configure(text=h33)
+        if h33<10:
+            hour_label_33.configure(text="0"+str(h33))
+# Clock Hours INCREMENT functions Ends Here
+        
+              
+# Clock Hours DECREMENT functions Starts Here
+def decrease_clock_hours_11():
+    global h11
+    if h11>=1:
+        h11 = h11 - 1
+        hour_label_11.configure(text=h11)
+        if h11<10:
+            hour_label_11.configure(text="0"+str(h11))
+        
+def decrease_clock_hours_22():
+    global h22
+    if h22>=1:
+        h22 = h22 - 1
+        hour_label_22.configure(text=h22)
+        if h22<10:
+            hour_label_22.configure(text="0"+str(h22))
+        
+def decrease_clock_hours_33():
+    global h33
+    if h33>=1:
+        h33 = h33 - 1
+        hour_label_33.configure(text=h33)
+        if h33<10:
+            hour_label_33.configure(text="0"+str(h33))
+# Clock Hours DECREMENT functions Ends Here
+    
+     
+ # Clock Minutes INCREMENT functions Starts Here
+def increase_clock_minutes_11():
+    global m11
+    if m11<=59:
+        m11 = m11 + 1
+        minute_label_11.configure(text=m11)
+        if m11<10:
+            minute_label_11.configure(text="0"+str(m11))
+        
+def increase_clock_minutes_22():
+    global m22
+    if m22<=59:
+        m22 = m22 + 1
+        minute_label_22.configure(text=m22)
+        if m22<10:
+            minute_label_22.configure(text="0"+str(m22))
+        
+def increase_clock_minutes_33():
+    global m33
+    if m33<=59:
+        m33 = m33 + 1
+        minute_label_33.configure(text=m33)
+        if m33<10:
+            minute_label_33.configure(text="0"+str(m33))
+# Clock Minutes INCREMENT functions Ends Here
+        
+        
+# Clock Minutes DECREMENT functions Starts Here
+def decrease_clock_minutes_11():
+    global m11    
+    if m11>=1:
+        m11 = m11 - 1
+        minute_label_11.configure(text=m11)
+        if m11<10:
+            minute_label_11.configure(text="0"+str(m11))
+        
+def decrease_clock_minutes_22():
+    global m22
+    if m22>=1:
+        m22 = m22 - 1
+        minute_label_22.configure(text=m22)
+        if m22<10:
+            minute_label_22.configure(text="0"+str(m22))
+        
+def decrease_clock_minutes_33():
+    global m33
+    if m33>=1:
+        m33 = m33 - 1
+        minute_label_33.configure(text=m33)
+        if m33<10:
+            minute_label_33.configure(text="0"+str(m33))
+# Clock Minutes DECREMENT functions Ends Here
+        
+        
+        
+# Clock Seconds INCREMENT functions Starts Here
+def increase_clock_seconds_11():
+    global s11
+    if s11<=59:
+        s11 = s11 + 1
+        second_label_11.configure(text=s11)
+        if s11<10:
+            second_label_11.configure(text="0"+str(s11))
+        
+def increase_clock_seconds_22():
+    global s22
+    if s22<=59:
+        s22 = s22 + 1
+        second_label_22.configure(text=s22)
+        if s22<10:
+            second_label_22.configure(text="0"+str(s22))
+        
+def increase_clock_seconds_33():
+    global s33
+    if s33<=59:
+        s33 = s33 + 1
+        second_label_33.configure(text=s33)
+        if s33<10:
+            second_label_33.configure(text="0"+str(s33))
+# Clock Seconds INCREMENT functions Ends Here
+          
+        
+# Clock Seconds DECREMENT functions Starts Here
+def decrease_clock_seconds_11():
+    global s11
+    if s11>=1:
+        s11 = s11 - 1
+        second_label_11.configure(text=s11)
+        if s11<10:
+            second_label_11.configure(text="0"+str(s11))
+        
+def decrease_clock_seconds_22():
+    global s22
+    if s22>=1:
+        s22 = s22 - 1
+        second_label_22.configure(text=s22)
+        if s22<10:
+            second_label_22.configure(text="0"+str(s22))
+def decrease_clock_seconds_33():
+    global s33
+    if s33>=1:
+        s33 = s33 - 1
+        second_label_33.configure(text=s33)
+        if s33<10:
+            second_label_33.configure(text="0"+str(s33))
+# Clock Seconds DECREMENT functions Ends Her
+
 def home():
     # Globalizing the variables
     global i 
@@ -330,7 +653,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_hours_1
+                                            command=increase_clock_hours_1
                                             )
                                             
     inch_button_1.place(x=420,y=112)
@@ -342,7 +665,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_minutes_1
+                                            command=increase_clock_minutes_1
                                             )
     incm_button_1.place(x=480,y=112)
     
@@ -353,7 +676,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_seconds_1
+                                            command=increase_clock_seconds_1
                                             )
     incs_button_1.place(x=540,y=112)
     
@@ -404,7 +727,7 @@ def home():
                                             corner_radius=8,
                                             width=30,
                                             #height=10,
-                                            #command=decrease_clock_hours_1
+                                            command=decrease_clock_hours_1
                                             )
     dech_button_1.place(x=420,y=186)
     
@@ -415,7 +738,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_minutes_1
+                                            command=decrease_clock_minutes_1
                                             )
     decm_button_1.place(x=480,y=186)
     
@@ -426,7 +749,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_seconds_1
+                                            command=decrease_clock_seconds_1
                                             )
     decs_button_1.place(x=540,y=186)
     # ********** END OF FIRST ROW TIME BUTTONS & LABELS **********
@@ -439,7 +762,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_hours_2
+                                            command=increase_clock_hours_2
                                             )                                       
     inch_button_2.place(x=420,y=240)
     
@@ -450,7 +773,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_minutes_2
+                                            command=increase_clock_minutes_2
                                             )
     incm_button_2.place(x= 480,y=240)
     
@@ -461,7 +784,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_seconds_2
+                                            command=increase_clock_seconds_2
                                             )
     incs_button_2.place(x=540,y=240)
     
@@ -510,7 +833,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_hours_2
+                                            command=decrease_clock_hours_2
                                             )
     dech_button_2.place(x=420,y=314)
     
@@ -521,7 +844,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_minutes_2
+                                            command=decrease_clock_minutes_2
                                             )
     decm_button_2.place(x=480,y=314)
     
@@ -532,7 +855,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_seconds_2
+                                            command=decrease_clock_seconds_2
                                             )
     decs_button_2.place(x=540,y=314)
     # ********** END OF SECOND ROW TIME BUTTONS & LABELS **********
@@ -545,7 +868,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_hours_3
+                                            command=increase_clock_hours_3
                                             )
     inch_button_3.place(x=420,y=368)
     
@@ -556,7 +879,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_minutes_3
+                                            command=increase_clock_minutes_3
                                             )
     incm_button_3.place(x= 480,y=368)
 
@@ -567,7 +890,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_seconds_3
+                                            command=increase_clock_seconds_3
                                             )
     incs_button_3.place(x=540,y=368)
 
@@ -614,7 +937,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,    
                                             width=30,
-                                            #command=decrease_clock_hours_3
+                                            command=decrease_clock_hours_3
                                             )
     dech_button_3.place(x=420,y=442)
 
@@ -625,7 +948,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_minutes_3
+                                            command=decrease_clock_minutes_3
                                             )
     decm_button_3.place(x=480,y=442)
     
@@ -636,7 +959,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_seconds_3
+                                            command=decrease_clock_seconds_3
                                             )
     decs_button_3.place(x=540,y=442)
     # ********** END OF THIRD ROW TIME BUTTONS & LABELS **********
@@ -650,7 +973,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_hours_11
+                                            command=increase_clock_hours_11
                                             )
                                             
     inch_button_11.place(x=720,y=112)
@@ -662,7 +985,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_minutes_11
+                                            command=increase_clock_minutes_11
                                             )
     incm_button_11.place(x= 780,y=112)
 
@@ -673,7 +996,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_seconds_11
+                                            command=increase_clock_seconds_11
                                             )
     incs_button_11.place(x=840,y=112)
 
@@ -720,7 +1043,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_hours_11
+                                            command=decrease_clock_hours_11
                                             )
     dech_button_11.place(x=720,y=186)
     
@@ -731,7 +1054,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_minutes_11
+                                            command=decrease_clock_minutes_11
                                             )
     decm_button_11.place(x=780,y=186)
     
@@ -742,7 +1065,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_seconds_11
+                                            command=decrease_clock_seconds_11
                                             )
     decs_button_11.place(x=840,y=186)
     # ********** END OF FIRST ROW TIME BUTTONS & LABELS **********
@@ -755,7 +1078,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_hours_22
+                                            command=increase_clock_hours_22
                                             )
     inch_button_22.place(x=720,y=242)
     
@@ -766,7 +1089,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_minutes_22
+                                            command=increase_clock_minutes_22
                                             )   
     incm_button_22.place(x=780,y=242)
 
@@ -777,7 +1100,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_seconds_22
+                                            command=increase_clock_seconds_22
                                             )
     incs_button_22.place(x=840,y=242)
     
@@ -824,7 +1147,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_hours_22
+                                            command=decrease_clock_hours_22
                                             )
     dech_button_22.place(x=720,y=316)
 
@@ -835,7 +1158,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_minutes_22
+                                            command=decrease_clock_minutes_22
                                             )
     decm_button_22.place(x=780,y=316)
     
@@ -846,7 +1169,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_seconds_22
+                                            command=decrease_clock_seconds_22
                                             )
     decs_button_22.place(x=840,y=316)
     # ********** END OF SECOND ROW TIME BUTTONS & LABELS **********
@@ -859,7 +1182,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_hours_33  
+                                            command=increase_clock_hours_33  
                                             )
     inch_button_33.place(x=720,y=372)
 
@@ -870,7 +1193,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_minutes_33
+                                            command=increase_clock_minutes_33
                                             )
     incm_button_33.place(x=780,y=372)
     
@@ -881,7 +1204,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=increase_clock_seconds_33
+                                            command=increase_clock_seconds_33
                                             )
     incs_button_33.place(x=840,y=372)
 
@@ -928,7 +1251,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_hours_33
+                                            command=decrease_clock_hours_33
                                             )
     dech_button_33.place(x=720,y=446)
 
@@ -939,7 +1262,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_minutes_33
+                                            command=decrease_clock_minutes_33
                                             )
     decm_button_33.place(x=780,y=446)
 
@@ -950,7 +1273,7 @@ def home():
                                             fg_color="white",
                                             corner_radius=8,
                                             width=30,
-                                            #command=decrease_clock_seconds_33
+                                            command=decrease_clock_seconds_33
                                             )
     decs_button_33.place(x=840,y=446)
     # ********** END OF THIRD ROW TIME BUTTONS & LABELS **********
