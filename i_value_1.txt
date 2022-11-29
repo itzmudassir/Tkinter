@@ -1,3 +1,0 @@
-1: 20
-Starting Time: 03:00:00
-Ending Time: 00:00:00

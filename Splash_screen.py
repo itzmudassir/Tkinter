@@ -174,12 +174,12 @@ def submit_1():
         modified.append(line.strip())
     modified = modified[0][0]
     if modified == "1":
-        first_label_11.configure(text="SCHEDULED")
-        first_label_11.configure(text_color="white")
+        schedule_label_1.configure(text="SCHEDULED")
+        schedule_label_1.configure(text_color="white")
         
     else:
-        first_label_11.configure(text="NON-SCHEDULED")
-        first_label_11.configure(text_color="black")
+        schedule_label_1.configure(text="NON-SCHEDULED")
+        schedule_label_1.configure(text_color="black")
        
 
         
@@ -220,12 +220,12 @@ def submit_2():
         modified.append(line.strip())
     modified = modified[0][0]
     if modified == "1":
-        second_label_11.configure(text="SCHEDULED")
-        second_label_11.configure(text_color="white")
+        schedule_label_2.configure(text="SCHEDULED")
+        schedule_label_2.configure(text_color="white")
         
     else:
-        second_label_11.configure(text="NON-SCHEDULED")
-        second_label_11.configure(text_color="black")
+        schedule_label_2.configure(text="NON-SCHEDULED")
+        schedule_label_2.configure(text_color="black")
     
        
 def submit_3():
@@ -265,12 +265,12 @@ def submit_3():
         modified.append(line.strip())
     modified = modified[0][0]
     if modified == "1":
-        third_label_11.configure(text="SCHEDULED")
-        third_label_11.configure(text_color="white")
+        schedule_label_3.configure(text="SCHEDULED")
+        schedule_label_3.configure(text_color="white")
         
     else:
-        third_label_11.configure(text="NON-SCHEDULED")
-        third_label_11.configure(text_color="black")
+        schedule_label_3.configure(text="NON-SCHEDULED")
+        schedule_label_3.configure(text_color="black")
     
 # Submit Button Functions Ends Here
 
@@ -858,9 +858,9 @@ def home():
     global minute_label_33  # Making the third minute_label global
     global second_label_33  # Making the third second_label global
     
-    global first_label_11  # Making the first_label_11 global
-    global second_label_11  # Making the second_label_11 global
-    global third_label_11  # Making the third_label_11 global
+    global schedule_label_1  # Making the first schedule_label global
+    global schedule_label_2  # Making the second schedule_label global
+    global schedule_label_3  # Making the third schedule_label global
     
     
     
@@ -1944,16 +1944,16 @@ def home():
     schedule_frame.place(x=10,y=500)
     
     # LABEL FOR THE SCHEDULE/NOT SCHEDULED
-    first_label_1 = customtkinter.CTkLabel(master=schedule_frame,
+    num_label_1 = customtkinter.CTkLabel(master=schedule_frame,
                                             text="1. ",
                                             text_color="black",
                                             text_font=("Arial", 15,BOLD),
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8)
-    first_label_1.place(x=0,y=30)
+    num_label_1.place(x=0,y=30)
     
-    second_label_2 = customtkinter.CTkLabel(master=schedule_frame,
+    snum_label_2 = customtkinter.CTkLabel(master=schedule_frame,
                                             text="2. ",
                                             text_color="black",
                                             text_font=("Arial", 15,BOLD),
@@ -1962,44 +1962,44 @@ def home():
                                             corner_radius=8)
     second_label_2.place(x=0,y=90)
     
-    third_label_3 = customtkinter.CTkLabel(master=schedule_frame,
+    num_label_3 = customtkinter.CTkLabel(master=schedule_frame,
                                             text="3. ",
                                             text_color="black", 
                                             text_font=("Arial", 15,BOLD),
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8)
-    third_label_3.place(x=0,y=150)
+    num_label_3.place(x=0,y=150)
     
     
 
     
-    first_label_11 = customtkinter.CTkLabel(master=schedule_frame,
+    schedule_label_1 = customtkinter.CTkLabel(master=schedule_frame,
                                             text="NON-SCHEDULED",
                                             text_color="black",
                                             text_font=("Arial", 15,BOLD),
                                             bg_color="white",
                                             fg_color="red",
                                             corner_radius=8)
-    first_label_11.place(x=90,y=30)
+    schedule_label_1.place(x=90,y=30)
     
-    second_label_11 = customtkinter.CTkLabel(master=schedule_frame,
+    sschedule_label_2 = customtkinter.CTkLabel(master=schedule_frame,
                                             text="NON-SCHEDULED",
                                             text_color="black",
                                             text_font=("Arial", 15,BOLD),
                                             bg_color="white",
                                             fg_color="red",
                                             corner_radius=8)
-    second_label_11.place(x=90,y=90)
+    sschedule_label_2.place(x=90,y=90)
     
-    third_label_11 = customtkinter.CTkLabel(master=schedule_frame, 
+    schedule_label_3 = customtkinter.CTkLabel(master=schedule_frame, 
                                             text="NON-SCHEDULED",
                                             text_color="black", 
                                             text_font=("Arial", 15,BOLD),
                                             bg_color="white",
                                             fg_color="red",
                                             corner_radius=8)
-    third_label_11.place(x=90,y=150)
+    schedule_label_3.place(x=90,y=150)
     
     
     

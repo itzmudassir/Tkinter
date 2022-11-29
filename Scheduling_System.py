@@ -123,9 +123,9 @@ def home():
     global minute_label_33  # Making the third minute_label global
     global second_label_33  # Making the third second_label global
     
-    global first_label_11  # Making the first_label_11 global
-    global second_label_11  # Making the second_label_11 global
-    global third_label_11  # Making the third_label_11 global
+    global schedule_label_1  # Making the schedule_label_1 global
+    global schedule_label_2  # Making the schedule_label_2 global
+    global schedule_label_3  # Making the schedule_label_3 global
     
     # IMAGE SECTION STARTS HERE
     
@@ -922,6 +922,72 @@ def home():
                                             #command=reset_3
                                             )
     reset_button_3.place(x=1150,y=413)
+    
+    # CREATING FRAME FOR SCHEDULING INFO
+    schedule_frame = customtkinter.CTkFrame(master=app,
+                                            width=900,
+                                            height=230,
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=15)
+    schedule_frame.place(x=10,y=500)
+    
+    # LABELS FOR SCHEDULING INFO
+    num_label_1 = customtkinter.CTkLabel(master=schedule_frame,
+                                            text="1. ",
+                                            text_color="black",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8)
+    num_label_1.place(x=0,y=30)
+    
+    snum_label_2 = customtkinter.CTkLabel(master=schedule_frame,
+                                            text="2. ",
+                                            text_color="black",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8)
+    snum_label_2.place(x=0,y=90)
+    
+    num_label_3 = customtkinter.CTkLabel(master=schedule_frame,
+                                            text="3. ",
+                                            text_color="black", 
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8)
+    num_label_3.place(x=0,y=150)
+    
+  
+    schedule_label_1 = customtkinter.CTkLabel(master=schedule_frame,
+                                            text="NON-SCHEDULED",
+                                            text_color="black",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="red",
+                                            corner_radius=8)
+    schedule_label_1.place(x=90,y=30)
+    
+    sschedule_label_2 = customtkinter.CTkLabel(master=schedule_frame,
+                                            text="NON-SCHEDULED",
+                                            text_color="black",
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="red",
+                                            corner_radius=8)
+    sschedule_label_2.place(x=90,y=90)
+    
+    schedule_label_3 = customtkinter.CTkLabel(master=schedule_frame, 
+                                            text="NON-SCHEDULED",
+                                            text_color="black", 
+                                            text_font=("Arial", 15,BOLD),
+                                            bg_color="white",
+                                            fg_color="red",
+                                            corner_radius=8)
+    schedule_label_3.place(x=90,y=150)
+    
 
     
     
