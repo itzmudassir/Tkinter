@@ -560,6 +560,218 @@ def submit_3():
     
 # Submit Button Functions Ends Here
 
+# CREATING ALARM FUNCTIONS STARTS HERE
+def alarm_on_1():
+    global modified_1
+    global modified 
+    global current_time
+    file = open("i_value_1.txt", "r")
+    read = file.readlines()
+    modified_1 = []
+    modified = []
+    for line in read:
+        modified_1.append(line.strip())
+        modified.append(line.strip())
+    
+    modified_1 = modified_1[1][15:]
+    modified_1 = modified_1.split(":")
+    modified = modified[0][0]
+    
+    print(modified_1)
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    current_time = current_time.split(":")
+    print(current_time)
+    if modified[0] == "1" and modified_1[0]==current_time[0] and modified_1[1]==current_time[1] and modified_1[2]==current_time[2]:
+        print("GPIO 1 ON")
+        light_off_b_1 = customtkinter.CTkButton(master=schedule_frame,
+                                       text = "",
+                                        fg_color = "white",
+                                        hover_color = "white",
+                                        text_color = "white",
+                                        bg_color = "white",
+                                        image = light_on,
+                                        width = 10,
+                                        height = 1)
+        light_off_b_1.place(x=300,y=23)
+    else:
+        print("")
+    app.after(1000, alarm_on_1)
+    
+def alarm_off_1():
+    global modified_1
+    global current_time
+    file = open("i_value_1.txt", "r")
+    read = file.readlines()
+    modified_1 = []
+    for line in read:
+        modified_1.append(line.strip())
+    modified_1 = modified_1[2][13:]
+    modified_1 = modified_1.split(":")
+    print(modified_1)
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    current_time = current_time.split(":")
+    print(current_time)
+    if modified_1[0]==current_time[0] and modified_1[1]==current_time[1] and modified_1[2]==current_time[2]:
+        print("GPIO 1 OFF")
+        light_off_b_1 = customtkinter.CTkButton(master=schedule_frame,
+                                       text = "",
+                                        fg_color = "white",
+                                        hover_color = "white",
+                                        text_color = "white",
+                                        bg_color = "white",
+                                        image = light_off,
+                                        width = 10,
+                                        height = 1)
+        light_off_b_1.place(x=300,y=23)
+    else:
+        print("")
+    app.after(1000, alarm_off_1)
+
+def alarm_on_2():
+    global modified
+    global modified_1
+    global current_time
+    file = open("i_value_2.txt", "r")
+    read = file.readlines()
+    modified_1 = []
+    for line in read:
+        modified_1.append(line.strip())
+    modified_1 = modified_1[1][15:]
+    modified_1 = modified_1.split(":")
+    print(modified_1)
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    current_time = current_time.split(":")
+    print(current_time)
+    if modified_1[0]==current_time[0] and modified_1[1]==current_time[1] and modified_1[2]==current_time[2]:
+        print("GPIO 2 ON")
+        light_off_b_2 = customtkinter.CTkButton(master=schedule_frame,
+                                        text = "", 
+                                        fg_color = "white",
+                                        hover_color = "white",
+                                        text_color = "white",
+                                        bg_color = "white",
+                                        image = light_on,
+                                        width = 10,
+                                        height = 1)
+        light_off_b_2.place(x=300,y=83)
+    else:
+        print("")
+    app.after(1000, alarm_on_2)
+
+def alarm_off_2():
+    global modified
+    global current_time
+    file = open("i_value_2.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[2][13:]
+    modified = modified.split(":")
+    print(modified)
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    current_time = current_time.split(":")
+    print(current_time)
+    if modified[0]==current_time[0] and modified[1]==current_time[1] and modified[2]==current_time[2]:
+        print("GPIO 2 OFF")
+        light_off_b_2 = customtkinter.CTkButton(master=schedule_frame,
+                                        text = "", 
+                                        fg_color = "white",
+                                        hover_color = "white",
+                                        text_color = "white",
+                                        bg_color = "white",
+                                        image = light_off,
+                                        width = 10,
+                                        height = 1)
+        light_off_b_2.place(x=300,y=83)
+    else:
+        print("")
+    app.after(1000, alarm_off_2)
+
+def alarm_off_3():
+    global modified
+    global current_time
+    file = open("i_value_3.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[2][13:]
+    modified = modified.split(":")
+    print(modified)
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    current_time = current_time.split(":")
+    print(current_time)
+    if modified[0]==current_time[0] and modified[1]==current_time[1] and modified[2]==current_time[2]:
+        print("GPIO 3 OFF")
+        light_off_b_3 = customtkinter.CTkButton(master=schedule_frame,
+                                        text = "",
+                                        fg_color = "white",
+                                        hover_color = "white",
+                                        text_color = "white",
+                                        bg_color = "white",
+                                        image = light_off,
+                                        width = 10,
+                                        height = 1)
+        light_off_b_3.place(x=300,y=143)
+    else:
+        print("")
+    app.after(1000, alarm_off_3)
+    
+    
+def alarm_on_3():
+    global modified
+    global modified_1
+    global current_time
+    file = open("i_value_3.txt", "r")
+    read = file.readlines()
+    modified_1 = []
+    for line in read:
+        modified_1.append(line.strip())
+    modified_1 = modified_1[1][15:]
+    modified_1 = modified_1.split(":")
+    print(modified_1)
+    global current_time
+    now = datetime.now()
+    current_time = now.strftime("%H:%M:%S")
+    current_time = current_time.split(":")
+    print(current_time)
+    if modified_1[0]==current_time[0] and modified_1[1]==current_time[1] and modified_1[2]==current_time[2]:
+        print("GPIO 3 ON")
+        light_off_b_3 = customtkinter.CTkButton(master=schedule_frame,
+                                        text = "",
+                                        fg_color = "white",
+                                        hover_color = "white",
+                                        text_color = "white",
+                                        bg_color = "white",
+                                        image = light_on,
+                                        width = 10,
+                                        height = 1)
+        light_off_b_3.place(x=300,y=143)
+    else:
+        print("")
+    app.after(1000, alarm_on_3)
+    
+# READ FROM TEXT FILE
+def read_from_text_file_1():
+    global modified_text_1
+    file = open("i_value_1.txt", "r")
+    read = file.readlines()
+    modified_text_1 = []
+    for line in read:
+        modified_text_1.append(line.strip())
+
+
 def home():
     # Globalizing the variables
     global i 
@@ -665,6 +877,10 @@ def home():
     global schedule_label_3  # Making the schedule_label_3 global
     
     global time_label  # Making the time_label global
+    global schedule_frame  # Making the schedule_frame global
+    
+    global light_off # Making the light_off global
+    global light_on # Making the light_on global
     
     # IMAGE SECTION STARTS HERE
     
@@ -672,10 +888,19 @@ def home():
     up_arrow = ImageTk.PhotoImage(Image.open("Elements\\up-arrow_1.png").resize((35,35)), Image.ANTIALIAS)
     down_arrow = ImageTk.PhotoImage(Image.open("Elements\\chevron.png").resize((35,35)), Image.ANTIALIAS)
     light_off = ImageTk.PhotoImage(Image.open("Elements\\light_off.png").resize((30,30)), Image.ANTIALIAS)
-    light_on = ImageTk.PhotoImage(Image.open("Elements\\light_on.png").resize((20,20)), Image.ANTIALIAS)
+    light_on = ImageTk.PhotoImage(Image.open("Elements\\light_on.png").resize((30,30)), Image.ANTIALIAS)
     calender = ImageTk.PhotoImage(Image.open("Elements\calendar.png").resize((40,40)), Image.ANTIALIAS)
     clock = ImageTk.PhotoImage(Image.open("Elements\\clock.png").resize((40,40)), Image.ANTIALIAS)
     # IMAGE SECTION ENDS HERE
+    
+    # Reading i_value_1
+    read_from_text_file_1()
+    text_read_1 = modified_text_1[0][0]
+    text_read_2 = modified_text_1[1][15:]
+    text_read_3 = modified_text_1[2][13:]
+    text_read_2 =  text_read_2.split(":")
+    text_read_3 =  text_read_3.split(":")
+    var1 = customtkinter.IntVar(value = text_read_1)
     
     # SHOWING THE TIME
     time_label = customtkinter.CTkLabel(master=app,
@@ -754,15 +979,24 @@ def home():
     # ********** END OF CHECKBOX SECTION **********
     
     # CHECKBOX LABEL SECTION STARTS HERE
-    label_1 = customtkinter.CTkLabel(master=app,
-                                      text="Non Active",
-                                      text_font=("Arial", 15, "bold"),
-                                      bg_color="white",
-                                      fg_color="red",
-                                      corner_radius=13,
-                                      text_color="white")
-                                      
-    label_1.place(x=40,y=153)
+    if text_read_1 == "1":
+        label_1 = customtkinter.CTkLabel(master=app,
+                                        text="Activated",
+                                        text_font=("Arial", 15, BOLD),
+                                        bg_color="white",
+                                        fg_color="green",
+                                        corner_radius=13,
+                                        text_color="white")
+        label_1.place(x=40,y=153)
+    else:
+        label_1 = customtkinter.CTkLabel(master=app,
+                                        text="Non Active",
+                                        text_font=("Arial", 15, BOLD),
+                                        bg_color="white",
+                                        fg_color="red",
+                                        corner_radius=13,
+                                        text_color="white")
+        label_1.place(x=40,y=153)
     
     label_2=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
@@ -1425,7 +1659,7 @@ def home():
                                             fg_color="#2A2A9C",
                                             corner_radius=8,
                                             text_font=("Arial", 15,BOLD),
-                                            #command=submit_1
+                                            command=submit_1
                                             )
     sub_button_1.place(x=950,y=153)
     
@@ -1436,7 +1670,7 @@ def home():
                                             fg_color="#2A2A9C",
                                             corner_radius=8,
                                             text_font=("Arial", 15,BOLD),
-                                            #command=submit_2
+                                            command=submit_2
                                             )
     sub_button_2.place(x=950,y=283)
     
@@ -1447,7 +1681,7 @@ def home():
                                             fg_color="#2A2A9C",
                                             corner_radius=8,
                                             text_font=("Arial", 15,BOLD),
-                                            #command=submit_3
+                                            command=submit_3
                                             )
     sub_button_3.place(x=950,y=413)
     
@@ -1532,14 +1766,14 @@ def home():
                                             corner_radius=8)
     schedule_label_1.place(x=90,y=30)
     
-    sschedule_label_2 = customtkinter.CTkLabel(master=schedule_frame,
+    schedule_label_2 = customtkinter.CTkLabel(master=schedule_frame,
                                             text="NON-SCHEDULED",
                                             text_color="black",
                                             text_font=("Arial", 15,BOLD),
                                             bg_color="white",
                                             fg_color="red",
                                             corner_radius=8)
-    sschedule_label_2.place(x=90,y=90)
+    schedule_label_2.place(x=90,y=90)
     
     schedule_label_3 = customtkinter.CTkLabel(master=schedule_frame, 
                                             text="NON-SCHEDULED",
@@ -1613,6 +1847,12 @@ def home():
 home()
 # Calling Clock function
 clock()
-
+# Calling ALARM functions
+alarm_on_1()
+alarm_off_1()
+alarm_on_2()
+alarm_off_2()
+alarm_on_3()
+alarm_off_3()
 # Running the mainloop
 app.mainloop()
