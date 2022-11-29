@@ -918,18 +918,18 @@ def home():
     
     # Reading i_value_2
     read_from_text_file_2()
-    text_read_11 = modified_text_1[0][0]
-    text_read_22 = modified_text_1[1][15:]
-    text_read_33 = modified_text_1[2][13:]
+    text_read_11 = modified_text_2[0][0]
+    text_read_22 = modified_text_2[1][15:]
+    text_read_33 = modified_text_2[2][13:]
     text_read_22 =  text_read_22.split(":")
     text_read_33 =  text_read_33.split(":")
     var2 = customtkinter.IntVar(value = text_read_11)
     
     # Reading i_value_3
     read_from_text_file_3()
-    text_read_111 = modified_text_1[0][0]
-    text_read_222 = modified_text_1[1][15:]
-    text_read_333 = modified_text_1[2][13:]
+    text_read_111 = modified_text_3[0][0]
+    text_read_222 = modified_text_3[1][15:]
+    text_read_333 = modified_text_3[2][13:]
     text_read_222 =  text_read_222.split(":")
     text_read_333 =  text_read_333.split(":")
     var3 = customtkinter.IntVar(value = text_read_111)
@@ -1107,7 +1107,7 @@ def home():
     
     
     hour_label_1 = customtkinter.CTkLabel(master=app,
-                                         text="00",
+                                         text=text_read_2[0],
                                          text_font=("Arial", 20,BOLD),
                                          bg_color="white",
                                          fg_color="white",
@@ -1121,7 +1121,7 @@ def home():
     hour_label_1.place(x=416,y=153)
     
     minute_label_1 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_2[1],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1133,7 +1133,7 @@ def home():
     minute_label_1.place(x=476,y=153)
     
     second_label_1 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_2[2],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1215,7 +1215,7 @@ def home():
     
     
     hour_label_2 = customtkinter.CTkLabel(master=app,
-                                         text="00",
+                                         text=text_read_22[0],
                                          text_font=("Arial", 20,BOLD),
                                          bg_color="white",
                                          fg_color="white",
@@ -1228,7 +1228,7 @@ def home():
     hour_label_2.place(x=416,y=281)
     
     minute_label_2 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_22[1],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1240,7 +1240,7 @@ def home():
     minute_label_2.place(x=476,y=281)
     
     second_label_2 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_22[2],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1320,7 +1320,7 @@ def home():
     incs_button_3.place(x=540,y=368)
 
     hour_label_3 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_222[0],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1332,7 +1332,7 @@ def home():
     hour_label_3.place(x=416,y=409)
 
     minute_label_3 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_222[1],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1344,7 +1344,7 @@ def home():
     minute_label_3.place(x=476,y=409)
     
     second_label_3 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_222[2],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1426,7 +1426,7 @@ def home():
     incs_button_11.place(x=840,y=112)
 
     hour_label_11 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_3[0],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1438,7 +1438,7 @@ def home():
     hour_label_11.place(x=716,y=153)
 
     minute_label_11 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_3[1],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1450,7 +1450,7 @@ def home():
     minute_label_11.place(x=776,y=153)
 
     second_label_11 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_3[2],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1530,7 +1530,7 @@ def home():
     incs_button_22.place(x=840,y=242)
     
     hour_label_22 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_33[0],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1542,7 +1542,7 @@ def home():
     hour_label_22.place(x=716,y=283)
     
     minute_label_22 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_33[1],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1554,7 +1554,7 @@ def home():
     minute_label_22.place(x=776,y=283)
     
     second_label_22 = customtkinter.CTkLabel(master=app,    
-                                            text="00",
+                                            text=text_read_33[2],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1634,7 +1634,7 @@ def home():
     incs_button_33.place(x=840,y=372)
 
     hour_label_33 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_333[0],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
@@ -1646,7 +1646,7 @@ def home():
     hour_label_33.place(x=716,y=413)
 
     minute_label_33 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_333[1],
                                             text_font=("Arial", 20,BOLD), 
                                             bg_color="white",
                                             fg_color="white",
@@ -1658,7 +1658,7 @@ def home():
     minute_label_33.place(x=776,y=413)
     
     second_label_33 = customtkinter.CTkLabel(master=app,
-                                            text="00",
+                                            text=text_read_333[2],
                                             text_font=("Arial", 20,BOLD),
                                             bg_color="white",
                                             fg_color="white",
