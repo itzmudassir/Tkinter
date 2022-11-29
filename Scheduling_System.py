@@ -23,6 +23,13 @@ app=customtkinter.CTk()
 app.wm_attributes('-fullscreen','True')
 app.configure(bg="white")
 
+# FUNCTIONS
+# # Creating CLOCK Function
+def clock():
+  string = time.strftime('%H:%M:%S')
+  time_label.configure(text=string)
+  time_label.after(1000, clock) 
+
 def home():
     # Globalizing the variables
     global i 
@@ -127,6 +134,8 @@ def home():
     global schedule_label_2  # Making the schedule_label_2 global
     global schedule_label_3  # Making the schedule_label_3 global
     
+    global time_label  # Making the time_label global
+    
     # IMAGE SECTION STARTS HERE
     
     # Define our images
@@ -135,7 +144,24 @@ def home():
     light_off = ImageTk.PhotoImage(Image.open("Elements\\light_off.png").resize((30,30)), Image.ANTIALIAS)
     light_on = ImageTk.PhotoImage(Image.open("Elements\\light_on.png").resize((20,20)), Image.ANTIALIAS)
     calender = ImageTk.PhotoImage(Image.open("Elements\calendar.png").resize((40,40)), Image.ANTIALIAS)
+    clock = ImageTk.PhotoImage(Image.open("Elements\\clock.png").resize((40,40)), Image.ANTIALIAS)
     # IMAGE SECTION ENDS HERE
+    
+    # SHOWING THE TIME
+    time_label = customtkinter.CTkLabel(master=app,
+                                        text_font=("calibri", 40, "bold"),
+                                        text_color="#2A2A9C",
+                                        bg_color="white")
+
+    time_label.place(x=10, y=10)
+  
+    # # Clock Image
+    # clock_image_button = customtkinter.CTkButton(master=app,
+    #                                               image=clock,
+    #                                               bg_color="white",
+    #                                               border_width=0)
+    # clock_image_button.place(x=10, y=70)
+    # TIME SECTION ENDS HERE
 
     # Creating the title of the window
     title1=customtkinter.CTkLabel(master=app,
@@ -1049,6 +1075,8 @@ def home():
     
 # Calling the home function
 home()
+# Calling Clock function
+clock()
 
 # Running the mainloop
 app.mainloop()
