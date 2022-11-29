@@ -855,6 +855,41 @@ def home():
     decs_button_33.place(x=840,y=446)
     # ********** END OF THIRD ROW TIME BUTTONS & LABELS **********
     
+    # CREATING SUMBIT BUTTON
+    sub_button_1 = customtkinter.CTkButton(master=app,
+                                            text="ꜱᴜʙᴍɪᴛ",
+                                            text_color="white",
+                                            hover_color="blue",
+                                            fg_color="#2A2A9C",
+                                            corner_radius=8,
+                                            text_font=("Arial", 15,BOLD),
+                                            #command=submit_1
+                                            )
+    sub_button_1.place(x=950,y=153)
+    
+    sub_button_2 = customtkinter.CTkButton(master=app,
+                                            text="ꜱᴜʙᴍɪᴛ",
+                                            text_color="white",
+                                            hover_color="blue",
+                                            fg_color="#2A2A9C",
+                                            corner_radius=8,
+                                            text_font=("Arial", 15,BOLD),
+                                            #command=submit_2
+                                            )
+    sub_button_2.place(x=950,y=283)
+    
+    sub_button_3 = customtkinter.CTkButton(master=app,
+                                            text="ꜱᴜʙᴍɪᴛ",
+                                            text_color="white",
+                                            hover_color="blue",
+                                            fg_color="#2A2A9C",
+                                            corner_radius=8,
+                                            text_font=("Arial", 15,BOLD),
+                                            #command=submit_3
+                                            )
+    sub_button_3.place(x=950,y=413)
+
+    
     
 
     
