@@ -221,6 +221,82 @@ def home():
     label_3.place(x=40,y=413)
     # ********** END OF CHECKBOX LABEL SECTION **********
     
+    # CREATING STARTING TIME LABELS & BUTTONS
+    # First Row Time Buttons & Labels
+    inch_button_1 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #command=increase_clock_hours_1
+                                            )
+                                            
+    inch_button_1.place(x=420,y=110)
+    
+    incm_button_1 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #command=increase_clock_minutes_1
+                                            )
+    incm_button_1.place(x=480,y=110)
+    
+    incs_button_1 = customtkinter.CTkButton(master=app,
+                                            text="",
+                                            image=up_arrow,
+                                            hover_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            width=30,
+                                            #command=increase_clock_seconds_1
+                                            )
+    incs_button_1.place(x=540,y=110)
+    
+    
+    hour_label_1 = customtkinter.CTkLabel(master=app,
+                                         text="00",
+                                         text_font=("Arial", 20,BOLD),
+                                         bg_color="white",
+                                         fg_color="white",
+                                         corner_radius=8,
+                                         text_color="#2A2A9C",
+                                          width=20,
+                                          height=10
+                                        )
+                                         
+                                             
+    hour_label_1.place(x=416,y=153)
+    
+    minute_label_1 = customtkinter.CTkLabel(master=app,
+                                            text="00",
+                                            text_font=("Arial", 20,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            text_color="#2A2A9C",
+                                            width=20,
+                                            height=10
+                                            )
+    minute_label_1.place(x=476,y=153)
+    
+    second_label_1 = customtkinter.CTkLabel(master=app,
+                                            text="00",
+                                            text_font=("Arial", 20,BOLD),
+                                            bg_color="white",
+                                            fg_color="white",
+                                            corner_radius=8,
+                                            text_color="#2A2A9C",
+                                            width=20,
+                                            height=10
+                                            )
+    second_label_1.place(x=536,y=153)
+    
+    
     # QUIT BUTTON SECTION STARTS HERE
     quit_button = customtkinter.CTkButton(master=app,
                                             text="X",
