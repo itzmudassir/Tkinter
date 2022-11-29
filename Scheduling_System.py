@@ -78,23 +78,23 @@ def checkbox_event_2():
      
 def checkbox_event_3():
     if(var3.get() == 1):
-        label_2=customtkinter.CTkLabel(master=app,
+        label_3=customtkinter.CTkLabel(master=app,
                                       text="Activated",
                                       text_font=("Arial", 15, BOLD),
                                       bg_color="white",
                                       fg_color="green",
                                       corner_radius=13,
                                       text_color="white")
-        label_2.place(x=40,y=413)
+        label_3.place(x=40,y=413)
     else:
-        label_2=customtkinter.CTkLabel(master=app,
+        label_3=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
                                       text_font=("Arial", 15, BOLD),
                                       bg_color="white",
                                       fg_color="red",
                                       corner_radius=13,
                                       text_color="white")
-        label_2.place(x=40,y=413)
+        label_3.place(x=40,y=413)
         
 # CHECKBOXES FUNCTIONS ENDS HERE
 
@@ -771,7 +771,21 @@ def read_from_text_file_1():
     for line in read:
         modified_text_1.append(line.strip())
 
+def read_from_text_file_2():
+    global modified_text_2
+    file = open("i_value_2.txt", "r")
+    read = file.readlines()
+    modified_text_2 = []
+    for line in read:
+        modified_text_2.append(line.strip())
 
+def read_from_text_file_3():
+    global modified_text_3
+    file = open("i_value_3.txt", "r")
+    read = file.readlines()
+    modified_text_3 = []
+    for line in read:
+        modified_text_3.append(line.strip())
 def home():
     # Globalizing the variables
     global i 
@@ -902,6 +916,24 @@ def home():
     text_read_3 =  text_read_3.split(":")
     var1 = customtkinter.IntVar(value = text_read_1)
     
+    # Reading i_value_2
+    read_from_text_file_2()
+    text_read_11 = modified_text_1[0][0]
+    text_read_22 = modified_text_1[1][15:]
+    text_read_33 = modified_text_1[2][13:]
+    text_read_22 =  text_read_22.split(":")
+    text_read_33 =  text_read_33.split(":")
+    var2 = customtkinter.IntVar(value = text_read_11)
+    
+    # Reading i_value_3
+    read_from_text_file_3()
+    text_read_111 = modified_text_1[0][0]
+    text_read_222 = modified_text_1[1][15:]
+    text_read_333 = modified_text_1[2][13:]
+    text_read_222 =  text_read_222.split(":")
+    text_read_333 =  text_read_333.split(":")
+    var3 = customtkinter.IntVar(value = text_read_111)
+    
     # SHOWING THE TIME
     time_label = customtkinter.CTkLabel(master=app,
                                         text_font=("calibri", 40, "bold"),
@@ -998,23 +1030,43 @@ def home():
                                         text_color="white")
         label_1.place(x=40,y=153)
     
-    label_2=customtkinter.CTkLabel(master=app,
+    if text_read_11 == "1":
+        label_2=customtkinter.CTkLabel(master=app,
+                                      text="Activated",
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="green",
+                                      corner_radius=13,
+                                      text_color="white")
+        label_2.place(x=40,y=283)
+    else:
+        label_2=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("Arial", 15, "bold"),
+                                      text_font=("Arial", 15, BOLD),
                                       bg_color="white",
                                       fg_color="red",
                                       corner_radius=13,
                                       text_color="white")
-    label_2.place(x=40,y=283)
+        label_2.place(x=40,y=283)
     
-    label_3 = customtkinter.CTkLabel(master=app,
+    if text_read_111 == "1":
+        label_3=customtkinter.CTkLabel(master=app,
+                                      text="Activated",
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="green",
+                                      corner_radius=13,
+                                      text_color="white")
+        label_3.place(x=40,y=413)
+    else:
+        label_3=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("Arial", 15, "bold"),
+                                      text_font=("Arial", 15, BOLD),
                                       bg_color="white",
                                       fg_color="red",
                                       corner_radius=13,
                                       text_color="white")
-    label_3.place(x=40,y=413)
+        label_3.place(x=40,y=413)
     # ********** END OF CHECKBOX LABEL SECTION **********
     
     # CREATING STARTING TIME LABELS & BUTTONS
