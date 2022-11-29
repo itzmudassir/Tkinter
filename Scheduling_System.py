@@ -24,11 +24,79 @@ app.wm_attributes('-fullscreen','True')
 app.configure(bg="white")
 
 # FUNCTIONS
-# # Creating CLOCK Function
+# Creating CLOCK Function
 def clock():
   string = time.strftime('%H:%M:%S')
   time_label.configure(text=string)
   time_label.after(1000, clock) 
+# END OF CLOCK FUNCTION
+
+# CHECKBOXES FUNCTIONS STARTS HERE
+def checkbox_event_1():
+    if(var1.get() == 1):
+        label_1 = customtkinter.CTkLabel(master=app,
+                                      text="Activated",
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="green",
+                                      corner_radius=13,
+                                      text_color="white")
+                                      
+        label_1.place(x=40,y=153)
+    else:
+        label_1 = customtkinter.CTkLabel(master=app,
+                                      text="Non Active",
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
+                                      text_color="white")
+                                      
+        label_1.place(x=40,y=153)
+
+               
+def checkbox_event_2():
+    if(var2.get() == 1):
+        label_2=customtkinter.CTkLabel(master=app,
+                                      text="Activated",
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="green",
+                                      corner_radius=13,
+                                      text_color="white")
+        label_2.place(x=40,y=283)
+    else:
+        label_2=customtkinter.CTkLabel(master=app,
+                                      text="Non Active",
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
+                                      text_color="white")
+        label_2.place(x=40,y=283)
+
+     
+def checkbox_event_3():
+    if(var3.get() == 1):
+        label_2=customtkinter.CTkLabel(master=app,
+                                      text="Activated",
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="green",
+                                      corner_radius=13,
+                                      text_color="white")
+        label_2.place(x=40,y=413)
+    else:
+        label_2=customtkinter.CTkLabel(master=app,
+                                      text="Non Active",
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
+                                      text_color="white")
+        label_2.place(x=40,y=413)
+        
+# CHECKBOXES FUNCTIONS ENDS HERE
 
 def home():
     # Globalizing the variables
@@ -193,7 +261,7 @@ def home():
     
     # CHECKBOX SECTION STARTS HERE
     checkbox_1 = customtkinter.CTkCheckBox(master=app,
-                                           #command=checkbox_event_1,
+                                           command=checkbox_event_1,
                                            variable=var1,
                                            hover_color = "#2A2A9C",
                                            fg_color = "#2A2A9C",
@@ -203,7 +271,7 @@ def home():
     checkbox_1.place(x=10, y = 155)
     
     checkbox_2 = customtkinter.CTkCheckBox(master=app, 
-                                           #command=checkbox_event_2,
+                                           command=checkbox_event_2,
                                            variable=var2,
                                            hover_color = "#2A2A9C",
                                            fg_color = "#2A2A9C",
@@ -213,7 +281,7 @@ def home():
     checkbox_2.place(x=10, y = 285)
     
     checkbox_3 = customtkinter.CTkCheckBox(master=app, 
-                                           #command=checkbox_event_3,
+                                           command=checkbox_event_3,
                                            variable=var3,
                                            hover_color = "#2A2A9C",
                                            fg_color = "#2A2A9C",
