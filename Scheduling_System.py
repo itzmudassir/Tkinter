@@ -888,6 +888,40 @@ def home():
                                             #command=submit_3
                                             )
     sub_button_3.place(x=950,y=413)
+    
+    # CREATING RESET BUTTON
+    reset_button_1 = customtkinter.CTkButton(master=app,
+                                            text="ʀᴇꜱᴇᴛ",
+                                            text_color="white",
+                                            hover_color="#F11F32",
+                                            fg_color="#F12B3D",
+                                            corner_radius=8,
+                                            text_font=("Arial", 15,BOLD),
+                                            #command=reset_1
+                                            )
+    reset_button_1.place(x=1150,y=153)
+
+    reset_button_2 = customtkinter.CTkButton(master=app,
+                                            text="ʀᴇꜱᴇᴛ",
+                                            text_color="white",
+                                            hover_color="#F11F32",
+                                            fg_color="#F12B3D",
+                                            corner_radius=8,
+                                            text_font=("Arial", 15,BOLD),
+                                            #command=reset_2
+                                            )
+    reset_button_2.place(x=1150,y=283)
+
+    reset_button_3 = customtkinter.CTkButton(master=app,
+                                            text="ʀᴇꜱᴇᴛ",
+                                            text_color="white",
+                                            hover_color="#F11F32",
+                                            fg_color="#F12B3D",
+                                            corner_radius=8,
+                                            text_font=("Arial", 15,BOLD),
+                                            #command=reset_3
+                                            )
+    reset_button_3.place(x=1150,y=413)
 
     
     
