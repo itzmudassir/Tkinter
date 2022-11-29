@@ -942,14 +942,14 @@ def home():
                                             corner_radius=8)
     num_label_1.place(x=0,y=30)
     
-    snum_label_2 = customtkinter.CTkLabel(master=schedule_frame,
+    num_label_2 = customtkinter.CTkLabel(master=schedule_frame,
                                             text="2. ",
                                             text_color="black",
                                             text_font=("Arial", 15,BOLD),
                                             bg_color="white",
                                             fg_color="white",
                                             corner_radius=8)
-    snum_label_2.place(x=0,y=90)
+    num_label_2.place(x=0,y=90)
     
     num_label_3 = customtkinter.CTkLabel(master=schedule_frame,
                                             text="3. ",
@@ -987,6 +987,41 @@ def home():
                                             fg_color="red",
                                             corner_radius=8)
     schedule_label_3.place(x=90,y=150)
+    
+    # DISPLAYING IMAGES
+    light_off_b_1 = customtkinter.CTkButton(master=schedule_frame,
+                                       text = "",
+                                        fg_color = "white",
+                                        hover_color = "white",
+                                        text_color = "white",
+                                        bg_color = "white",
+                                        image = light_off,
+                                        width = 10,
+                                        height = 1)
+    light_off_b_1.place(x=300,y=23)
+    
+    light_off_b_2 = customtkinter.CTkButton(master=schedule_frame,
+                                        text = "", 
+                                        fg_color = "white",
+                                        hover_color = "white",
+                                        text_color = "white",
+                                        bg_color = "white",
+                                        image = light_off,
+                                        width = 10,
+                                        height = 1)
+    light_off_b_2.place(x=300,y=83)
+    
+    light_off_b_3 = customtkinter.CTkButton(master=schedule_frame,
+                                        text = "",
+                                        fg_color = "white",
+                                        hover_color = "white",
+                                        text_color = "white",
+                                        bg_color = "white",
+                                        image = light_off,
+                                        width = 10,
+                                        height = 1)
+    light_off_b_3.place(x=300,y=143)
+    # END OF SCHEDULING INFO
     
 
     
