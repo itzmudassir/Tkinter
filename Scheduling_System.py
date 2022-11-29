@@ -221,6 +221,19 @@ def home():
     label_3.place(x=40,y=413)
     # ********** END OF CHECKBOX LABEL SECTION **********
     
+    # QUIT BUTTON SECTION STARTS HERE
+    quit_button = customtkinter.CTkButton(master=app,
+                                            text="X",
+                                            text_color="white",
+                                            hover_color="#3A3A3A",
+                                            fg_color="red",
+                                            corner_radius=8,
+                                            text_font=("Arial", 15,BOLD),
+                                            command=quit)
+    quit_button.place(x=1250,y=10)
+    
+    # ********** END OF QUIT BUTTON SECTION **********
+    
     
     
 # Calling the home function
