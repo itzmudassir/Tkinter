@@ -803,6 +803,17 @@ def reset_1():
     file = open("i_value_1.txt", "w")
     file.write("0: 0"+"\n"+ "Starting Time: 00:00:00" + "\n" + "Ending Time: 00:00:00")
     file.close() 
+    var1.set("0")
+    label_1 = customtkinter.CTkLabel(master=app,
+                                        text="Non Active",
+                                        text_font=("Arial", 15, BOLD),
+                                        bg_color="white",
+                                        fg_color="red",
+                                        corner_radius=13,
+                                        text_color="white")
+    label_1.place(x=40,y=153)   
+    
+    
     hour_label_1 = customtkinter.CTkLabel(master=app,
                                          text="00",
                                          text_font=("Arial", 20,BOLD),
@@ -876,13 +887,36 @@ def reset_1():
                                             height=10
                                             )
     second_label_11.place(x=836,y=153)
-    
-    
+    file = open("i_value_1.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[0][0]
+    if modified == "1":
+        schedule_label_1.configure(text="SCHEDULED")
+        schedule_label_1.configure(text_color="white")
+        
+    else:
+        schedule_label_1.configure(text="NON-SCHEDULED")
+        schedule_label_1.configure(text_color="black")
     
 def reset_2():
     file = open("i_value_2.txt", "w")
     file.write("0: 0"+"\n"+ "Starting Time: 00:00:00" + "\n" + "Ending Time: 00:00:00")
     file.close() 
+    var2.set("0")
+    
+    label_2=customtkinter.CTkLabel(master=app,
+                                      text="Non Active",
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
+                                      text_color="white")
+    label_2.place(x=40,y=283) 
+    
+    
     
     hour_label_2 = customtkinter.CTkLabel(master=app,
                                          text="00",
@@ -956,12 +990,35 @@ def reset_2():
                                             height=10
                                             )   
     second_label_22.place(x=836,y=283)
+    
+    file = open("i_value_2.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[0][0]
+    if modified == "1":
+        schedule_label_2.configure(text="SCHEDULED")
+        schedule_label_2.configure(text_color="white")
+        
+    else:
+        schedule_label_2.configure(text="NON-SCHEDULED")
+        schedule_label_2.configure(text_color="black")
 
     
 def reset_3():
     file = open("i_value_3.txt", "w")
     file.write("0: 0"+"\n"+ "Starting Time: 00:00:00" + "\n" + "Ending Time: 00:00:00")
     file.close()
+    var3.set("0")
+    label_3=customtkinter.CTkLabel(master=app,
+                                      text="Non Active",
+                                      text_font=("Arial", 15, BOLD),
+                                      bg_color="white",
+                                      fg_color="red",
+                                      corner_radius=13,
+                                      text_color="white")
+    label_3.place(x=40,y=413)
     
     hour_label_3 = customtkinter.CTkLabel(master=app,
                                             text="00",
@@ -1034,6 +1091,22 @@ def reset_3():
                                             height=10
                                             )
     second_label_33.place(x=836,y=413)
+    
+    file = open("i_value_3.txt", "r")
+    read = file.readlines()
+    modified = []
+    for line in read:
+        modified.append(line.strip())
+    modified = modified[0][0]
+    if modified == "1":
+        schedule_label_3.configure(text="SCHEDULED")
+        schedule_label_3.configure(text_color="white")
+        
+    else:
+        schedule_label_3.configure(text="NON-SCHEDULED")
+        schedule_label_3.configure(text_color="black")
+    
+    
 
 def home():
     # Globalizing the variables
