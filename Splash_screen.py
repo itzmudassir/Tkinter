@@ -664,7 +664,7 @@ def alarm_on_2():
                                         image = light_on,
                                         width = 10,
                                         height = 1)
-        light_off_b_2.place(x=300,y=143)
+        light_off_b_2.place(x=300,y=83)
     else:
         print("")
     app.after(1000, alarm_on_2)
