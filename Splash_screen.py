@@ -1109,6 +1109,47 @@ def reset_3():
     
 
 def home():
+    # READING THE VALUES FROM THE FILE 1
+    file = open("i_value_1.txt", "r")
+    read = file.readlines()
+    file_modified_1 = []
+    for line in read: 
+        file_modified_1.append(line.strip())
+    hours_1 = file_modified_1[1][15:17]
+    minutes_1 = file_modified_1[1][18:20]
+    seconds_1 = file_modified_1[1][21:23]
+    hours_11 = file_modified_1[2][13:15]
+    minutes_11 = file_modified_1[2][16:18]
+    seconds_11 = file_modified_1[2][19:21]
+    
+    
+    # READING THE VALUES FROM THE FILE 2
+    file = open("i_value_2.txt", "r")
+    read = file.readlines()
+    file_modified_2 = []
+    for line in read:
+        file_modified_2.append(line.strip())
+    hours_2 = file_modified_2[1][15:17]
+    minutes_2 = file_modified_2[1][18:20]
+    seconds_2 = file_modified_2[1][21:23]
+    hours_22 = file_modified_2[2][13:15]
+    minutes_22 = file_modified_2[2][16:18]
+    seconds_22 = file_modified_2[2][19:21]
+    
+    # READING THE VALUES FROM THE FILE 3
+    file = open("i_value_3.txt", "r")
+    read = file.readlines()
+    file_modified_3 = []
+    for line in read:
+        file_modified_3.append(line.strip())
+    hours_3 = file_modified_3[1][15:17]
+    minutes_3 = file_modified_3[1][18:20]
+    seconds_3 = file_modified_3[1][21:23]
+    hours_33 = file_modified_3[2][13:15]
+    minutes_33 = file_modified_3[2][16:18]
+    seconds_33 = file_modified_3[2][19:21]
+
+    
     # Globalizing the variables
     global i 
     global j
@@ -1135,24 +1176,24 @@ def home():
     i = 0
     j = 0
     k = 0
-    h1= 0
-    m1 = 0
-    s1 = 0
-    h2 = 0
-    m2 = 0
-    s2 = 0
-    h3 = 0
-    m3 = 0
-    s3 = 0
-    h11 = 0
-    m11 = 0
-    s11 = 0
-    h22 = 0
-    m22 = 0
-    s22 = 0
-    h33 = 0
-    m33 = 0
-    s33 = 0
+    h1 = int(hours_1)
+    m1 = int(minutes_1)
+    s1 = int(seconds_1)
+    h2 = int(hours_2)
+    m2 = int(minutes_2)
+    s2 = int(seconds_2)
+    h3 = int(hours_3)
+    m3 = int(minutes_3)
+    s3 = int(seconds_3)
+    h11 = int(hours_11)
+    m11 = int(minutes_11)
+    s11 = int(seconds_11)
+    h22 = int(hours_22)
+    m22 = int(minutes_22)
+    s22 = int(seconds_22)
+    h33 = int(hours_33)
+    m33 = int(minutes_33)   
+    s33 = int(seconds_33)
     
     global checkbox_1    # Making the checkbox_1 global
     global checkbox_2    # Making the checkbox_2 global
@@ -1217,6 +1258,9 @@ def home():
     
     global light_off # Making the light_off global
     global light_on # Making the light_on global
+    
+    
+    
     
     # IMAGE SECTION STARTS HERE
     
@@ -2252,11 +2296,11 @@ home()
 # Calling Clock function
 clock()
 # Calling ALARM functions
-alarm_on_1()
-alarm_off_1()
-alarm_on_2()
-alarm_off_2()
-alarm_on_3()
-alarm_off_3()
+# alarm_on_1()
+# alarm_off_1()
+# alarm_on_2()
+# alarm_off_2()
+# alarm_on_3()
+# alarm_off_3()
 # Running the mainloop
 app.mainloop()
