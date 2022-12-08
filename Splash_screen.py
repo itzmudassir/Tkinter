@@ -1341,6 +1341,7 @@ def home():
                                             height=30,
                                             width=30,
                                             bg="white",
+                                            hover_color="white",
                                             fg_color="white")
     schedule_img.place(x=950, y=15)
     
