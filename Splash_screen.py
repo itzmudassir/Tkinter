@@ -2293,15 +2293,24 @@ def home():
     
     
 # Calling the home function
-home()
+# Creating the Splash Screen
+frame_video=customtkinter.CTkFrame(master=app,width=240,corner_radius=20,fg_color="white")
+frame_video.place(x=0, y=0, width=1366, height=768)
+videoplayer = TkinterVideo(frame_video, scaled=True)
+videoplayer.load(r'Elements\Scheduling_1.mp4')
+videoplayer.pack(expand=True, fill="both")
+videoplayer.play()
+
+app.after(2000,frame_video.destroy)    # Destroying the splash screen after 3 seconds
+app.after(2000,home)     
 # Calling Clock function
-clock()
+app.after(2000,clock)
 # Calling ALARM functions
-# alarm_on_1()
-# alarm_off_1()
-# alarm_on_2()
-# alarm_off_2()
-# alarm_on_3()
-# alarm_off_3()
+alarm_on_1()
+alarm_off_1()
+alarm_on_2()
+alarm_off_2()
+alarm_on_3()
+alarm_off_3()
 # Running the mainloop
 app.mainloop()
