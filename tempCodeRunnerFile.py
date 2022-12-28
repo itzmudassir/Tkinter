@@ -1,6 +1,0 @@
-alarm_on_1()
-# alarm_off_1()
-# alarm_on_2()
-# alarm_off_2()
-# alarm_on_3()
-# alarm_off_3()

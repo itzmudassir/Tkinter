@@ -21,11 +21,12 @@ customtkinter.set_default_color_theme("blue")
 # Creating the window
 app=customtkinter.CTk()
 app.wm_attributes('-fullscreen','True')
-app.configure(bg="white")
+app.configure(fg_color  = "white")
 
 # FUNCTIONS
 # Creating CLOCK Function
 def clock():
+  global time_label
   string = time.strftime('%H:%M:%S')
   time_label.configure(text=string)
   time_label.after(1000, clock) 
@@ -36,8 +37,8 @@ def checkbox_event_1():
     if(var1.get() == 1):
         label_1 = customtkinter.CTkLabel(master=app,
                                       text="Activated",
-                                      text_font=("Arial", 15, BOLD),
-                                      bg_color="white",
+                                      font=("Arial", 15, BOLD),
+                                      #bg_color="white",
                                       fg_color="green",
                                       corner_radius=13,
                                       text_color="white")
@@ -46,8 +47,8 @@ def checkbox_event_1():
     else:
         label_1 = customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("Arial", 15, BOLD),
-                                      bg_color="white",
+                                      font=("Arial", 15, BOLD),
+                                      #bg_color="white",
                                       fg_color="red",
                                       corner_radius=13,
                                       text_color="white")
@@ -59,8 +60,8 @@ def checkbox_event_2():
     if(var2.get() == 1):
         label_2=customtkinter.CTkLabel(master=app,
                                       text="Activated",
-                                      text_font=("Arial", 15, BOLD),
-                                      bg_color="white",
+                                      font=("Arial", 15, BOLD),
+                                      #bg_color="white",
                                       fg_color="green",
                                       corner_radius=13,
                                       text_color="white")
@@ -68,8 +69,8 @@ def checkbox_event_2():
     else:
         label_2=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("Arial", 15, BOLD),
-                                      bg_color="white",
+                                      font=("Arial", 15, BOLD),
+                                      #bg_color="white",
                                       fg_color="red",
                                       corner_radius=13,
                                       text_color="white")
@@ -80,8 +81,8 @@ def checkbox_event_3():
     if(var3.get() == 1):
         label_3=customtkinter.CTkLabel(master=app,
                                       text="Activated",
-                                      text_font=("Arial", 15, BOLD),
-                                      bg_color="white",
+                                      font=("Arial", 15, BOLD),
+                                      #bg_color="white",
                                       fg_color="green",
                                       corner_radius=13,
                                       text_color="white")
@@ -89,8 +90,8 @@ def checkbox_event_3():
     else:
         label_3=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("Arial", 15, BOLD),
-                                      bg_color="white",
+                                      font=("Arial", 15, BOLD),
+                                      #bg_color="white",
                                       fg_color="red",
                                       corner_radius=13,
                                       text_color="white")
@@ -590,7 +591,7 @@ def alarm_on_1():
                                         fg_color = "white",
                                         hover_color = "white",
                                         text_color = "white",
-                                        bg_color = "white",
+                                        #bg_color = "white",
                                         image = light_on,
                                         width = 10,
                                         height = 1)
@@ -622,7 +623,7 @@ def alarm_off_1():
                                         fg_color = "white",
                                         hover_color = "white",
                                         text_color = "white",
-                                        bg_color = "white",
+                                        #bg_color = "white",
                                         image = light_off,
                                         width = 10,
                                         height = 1)
@@ -660,7 +661,7 @@ def alarm_on_2():
                                         fg_color = "white",
                                         hover_color = "white",
                                         text_color = "white",
-                                        bg_color = "white",
+                                        #bg_color = "white",
                                         image = light_on,
                                         width = 10,
                                         height = 1)
@@ -692,7 +693,7 @@ def alarm_off_2():
                                         fg_color = "white",
                                         hover_color = "white",
                                         text_color = "white",
-                                        bg_color = "white",
+                                        #bg_color = "white",
                                         image = light_off,
                                         width = 10,
                                         height = 1)
@@ -725,7 +726,7 @@ def alarm_off_3():
                                         fg_color = "white",
                                         hover_color = "white",
                                         text_color = "white",
-                                        bg_color = "white",
+                                        #bg_color = "white",
                                         image = light_off,
                                         width = 10,
                                         height = 1)
@@ -764,7 +765,7 @@ def alarm_on_3():
                                         fg_color = "white",
                                         hover_color = "white",
                                         text_color = "white",
-                                        bg_color = "white",
+                                        #bg_color = "white",
                                         image = light_on,
                                         width = 10,
                                         height = 1)
@@ -806,8 +807,8 @@ def reset_1():
     var1.set("0")
     label_1 = customtkinter.CTkLabel(master=app,
                                         text="Non Active",
-                                        text_font=("Arial", 15, BOLD),
-                                        bg_color="white",
+                                        font=("Arial", 15, BOLD),
+                                        #bg_color="white",
                                         fg_color="red",
                                         corner_radius=13,
                                         text_color="white")
@@ -816,8 +817,8 @@ def reset_1():
     
     hour_label_1 = customtkinter.CTkLabel(master=app,
                                          text="00",
-                                         text_font=("Arial", 20,BOLD),
-                                         bg_color="white",
+                                         font=("Arial", 20,BOLD),
+                                         #bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
                                          text_color="#2A2A9C",
@@ -830,8 +831,8 @@ def reset_1():
     
     minute_label_1 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -842,8 +843,8 @@ def reset_1():
     
     second_label_1 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -854,8 +855,8 @@ def reset_1():
     
     hour_label_11 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -866,8 +867,8 @@ def reset_1():
 
     minute_label_11 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -878,8 +879,8 @@ def reset_1():
 
     second_label_11 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -909,8 +910,8 @@ def reset_2():
     
     label_2=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("Arial", 15, BOLD),
-                                      bg_color="white",
+                                      font=("Arial", 15, BOLD),
+                                      #bg_color="white",
                                       fg_color="red",
                                       corner_radius=13,
                                       text_color="white")
@@ -920,8 +921,8 @@ def reset_2():
     
     hour_label_2 = customtkinter.CTkLabel(master=app,
                                          text="00",
-                                         text_font=("Arial", 20,BOLD),
-                                         bg_color="white",
+                                         font=("Arial", 20,BOLD),
+                                         #bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
                                          text_color="#2A2A9C",
@@ -933,8 +934,8 @@ def reset_2():
     
     minute_label_2 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -945,8 +946,8 @@ def reset_2():
     
     second_label_2 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",   
@@ -957,8 +958,8 @@ def reset_2():
     
     hour_label_22 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -969,8 +970,8 @@ def reset_2():
     
     minute_label_22 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -981,8 +982,8 @@ def reset_2():
     
     second_label_22 = customtkinter.CTkLabel(master=app,    
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1013,8 +1014,8 @@ def reset_3():
     var3.set("0")
     label_3=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("Arial", 15, BOLD),
-                                      bg_color="white",
+                                      font=("Arial", 15, BOLD),
+                                      #bg_color="white",
                                       fg_color="red",
                                       corner_radius=13,
                                       text_color="white")
@@ -1022,8 +1023,8 @@ def reset_3():
     
     hour_label_3 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1034,8 +1035,8 @@ def reset_3():
 
     minute_label_3 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",   
@@ -1046,8 +1047,8 @@ def reset_3():
     
     second_label_3 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1058,8 +1059,8 @@ def reset_3():
     
     hour_label_33 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1070,8 +1071,8 @@ def reset_3():
 
     minute_label_33 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD), 
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD), 
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1082,8 +1083,8 @@ def reset_3():
     
     second_label_33 = customtkinter.CTkLabel(master=app,
                                             text="00",
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1265,12 +1266,12 @@ def home():
     # IMAGE SECTION STARTS HERE
     
     # Define our images
-    up_arrow = ImageTk.PhotoImage(Image.open("Elements\\up-arrow_1.png").resize((35,35)), Image.ANTIALIAS)
-    down_arrow = ImageTk.PhotoImage(Image.open("Elements\\chevron.png").resize((35,35)), Image.ANTIALIAS)
-    light_off = ImageTk.PhotoImage(Image.open("Elements\\light_off.png").resize((30,30)), Image.ANTIALIAS)
-    light_on = ImageTk.PhotoImage(Image.open("Elements\\light_on.png").resize((30,30)), Image.ANTIALIAS)
-    calender = ImageTk.PhotoImage(Image.open("Elements\calendar.png").resize((40,40)), Image.ANTIALIAS)
-    clock = ImageTk.PhotoImage(Image.open("Elements\\clock.png").resize((40,40)), Image.ANTIALIAS)
+    up_arrow = customtkinter.CTkImage(Image.open("Elements\\up-arrow_1.png"),size=(35, 35))
+    down_arrow = customtkinter.CTkImage(Image.open("Elements\\chevron.png"),size=(35, 35))
+    light_off = customtkinter.CTkImage(Image.open("Elements\\light_off.png"),size=(30, 30))
+    light_on = customtkinter.CTkImage(Image.open("Elements\\light_on.png"),size=(30, 30))
+    calender = customtkinter.CTkImage(Image.open("Elements\calendar.png"),size=(40, 40))
+    clock = customtkinter.CTkImage(Image.open("Elements\\clock.png"),size=(40, 40))
     # IMAGE SECTION ENDS HERE
     
     # Reading i_value_1
@@ -1302,9 +1303,10 @@ def home():
     
     # SHOWING THE TIME
     time_label = customtkinter.CTkLabel(master=app,
-                                        text_font=("calibri", 40, "bold"),
+                                        font=("Arial", 40, "bold"),
                                         text_color="#2A2A9C",
-                                        bg_color="white")
+                                        #bg_color="white")
+                                        )
 
     time_label.place(x=10, y=10)
   
@@ -1314,7 +1316,7 @@ def home():
                                                   fg_color = "white",
                                                   hover_color = "white",
                                                   text_color = "white",
-                                                  bg_color = "white",
+                                                  #bg_color = "white",
                                                   image = clock,
                                                   width = 10,
                                                   height = 1
@@ -1322,16 +1324,17 @@ def home():
     clock_image_button.place(x=210, y=20)
     # TIME SECTION ENDS HERE
 
+
     # Creating the title of the window
     title1=customtkinter.CTkLabel(master=app,
                                     text="ꜱᴄʜᴇᴅᴜʟɪɴɢ ",
-                                    text_font=("Arial", 40, "bold"),
+                                    font=("Arial", 40, "bold"),
                                     text_color="#2A2A9C")
     title1.place(x=450, y=1)
 
     title2=customtkinter.CTkLabel(master=app,
                                     text="ꜱʏꜱᴛᴇᴍ",
-                                    text_font=("Arial", 40, "bold"),
+                                    font=("Arial", 40, "bold"),
                                     text_color="black")
     title2.place(x=750, y=1)
     
@@ -1340,7 +1343,7 @@ def home():
                                             image = calender,
                                             height=30,
                                             width=30,
-                                            bg="white",
+                                            #bg="white",
                                             hover_color="white",
                                             fg_color="white")
     schedule_img.place(x=950, y=15)
@@ -1381,8 +1384,8 @@ def home():
     if text_read_1 == "1":
         label_1 = customtkinter.CTkLabel(master=app,
                                         text="Activated",
-                                        text_font=("Arial", 15, BOLD),
-                                        bg_color="white",
+                                        font=("Arial", 15, BOLD),
+                                        #bg_color="white",
                                         fg_color="green",
                                         corner_radius=13,
                                         text_color="white")
@@ -1390,8 +1393,8 @@ def home():
     else:
         label_1 = customtkinter.CTkLabel(master=app,
                                         text="Non Active",
-                                        text_font=("Arial", 15, BOLD),
-                                        bg_color="white",
+                                        font=("Arial", 15, BOLD),
+                                        #bg_color="white",
                                         fg_color="red",
                                         corner_radius=13,
                                         text_color="white")
@@ -1400,8 +1403,8 @@ def home():
     if text_read_11 == "1":
         label_2=customtkinter.CTkLabel(master=app,
                                       text="Activated",
-                                      text_font=("Arial", 15, BOLD),
-                                      bg_color="white",
+                                      font=("Arial", 15, BOLD),
+                                      #bg_color="white",
                                       fg_color="green",
                                       corner_radius=13,
                                       text_color="white")
@@ -1409,8 +1412,8 @@ def home():
     else:
         label_2=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("Arial", 15, BOLD),
-                                      bg_color="white",
+                                      font=("Arial", 15, BOLD),
+                                      #bg_color="white",
                                       fg_color="red",
                                       corner_radius=13,
                                       text_color="white")
@@ -1419,8 +1422,8 @@ def home():
     if text_read_111 == "1":
         label_3=customtkinter.CTkLabel(master=app,
                                       text="Activated",
-                                      text_font=("Arial", 15, BOLD),
-                                      bg_color="white",
+                                      font=("Arial", 15, BOLD),
+                                      #bg_color="white",
                                       fg_color="green",
                                       corner_radius=13,
                                       text_color="white")
@@ -1428,8 +1431,8 @@ def home():
     else:
         label_3=customtkinter.CTkLabel(master=app,
                                       text="Non Active",
-                                      text_font=("Arial", 15, BOLD),
-                                      bg_color="white",
+                                      font=("Arial", 15, BOLD),
+                                      #bg_color="white",
                                       fg_color="red",
                                       corner_radius=13,
                                       text_color="white")
@@ -1475,8 +1478,8 @@ def home():
     
     hour_label_1 = customtkinter.CTkLabel(master=app,
                                          text=text_read_2[0],
-                                         text_font=("Arial", 20,BOLD),
-                                         bg_color="white",
+                                         font=("Arial", 20,BOLD),
+                                         #bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
                                          text_color="#2A2A9C",
@@ -1489,8 +1492,8 @@ def home():
     
     minute_label_1 = customtkinter.CTkLabel(master=app,
                                             text=text_read_2[1],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1501,8 +1504,8 @@ def home():
     
     second_label_1 = customtkinter.CTkLabel(master=app,
                                             text=text_read_2[2],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1583,8 +1586,8 @@ def home():
     
     hour_label_2 = customtkinter.CTkLabel(master=app,
                                          text=text_read_22[0],
-                                         text_font=("Arial", 20,BOLD),
-                                         bg_color="white",
+                                         font=("Arial", 20,BOLD),
+                                         #bg_color="white",
                                          fg_color="white",
                                          corner_radius=8,
                                          text_color="#2A2A9C",
@@ -1596,8 +1599,8 @@ def home():
     
     minute_label_2 = customtkinter.CTkLabel(master=app,
                                             text=text_read_22[1],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1608,8 +1611,8 @@ def home():
     
     second_label_2 = customtkinter.CTkLabel(master=app,
                                             text=text_read_22[2],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",   
@@ -1688,8 +1691,8 @@ def home():
 
     hour_label_3 = customtkinter.CTkLabel(master=app,
                                             text=text_read_222[0],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1700,8 +1703,8 @@ def home():
 
     minute_label_3 = customtkinter.CTkLabel(master=app,
                                             text=text_read_222[1],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",   
@@ -1712,8 +1715,8 @@ def home():
     
     second_label_3 = customtkinter.CTkLabel(master=app,
                                             text=text_read_222[2],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1794,8 +1797,8 @@ def home():
 
     hour_label_11 = customtkinter.CTkLabel(master=app,
                                             text=text_read_3[0],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1806,8 +1809,8 @@ def home():
 
     minute_label_11 = customtkinter.CTkLabel(master=app,
                                             text=text_read_3[1],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1818,8 +1821,8 @@ def home():
 
     second_label_11 = customtkinter.CTkLabel(master=app,
                                             text=text_read_3[2],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1898,8 +1901,8 @@ def home():
     
     hour_label_22 = customtkinter.CTkLabel(master=app,
                                             text=text_read_33[0],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1910,8 +1913,8 @@ def home():
     
     minute_label_22 = customtkinter.CTkLabel(master=app,
                                             text=text_read_33[1],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -1922,8 +1925,8 @@ def home():
     
     second_label_22 = customtkinter.CTkLabel(master=app,    
                                             text=text_read_33[2],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -2002,8 +2005,8 @@ def home():
 
     hour_label_33 = customtkinter.CTkLabel(master=app,
                                             text=text_read_333[0],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -2014,8 +2017,8 @@ def home():
 
     minute_label_33 = customtkinter.CTkLabel(master=app,
                                             text=text_read_333[1],
-                                            text_font=("Arial", 20,BOLD), 
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD), 
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -2026,8 +2029,8 @@ def home():
     
     second_label_33 = customtkinter.CTkLabel(master=app,
                                             text=text_read_333[2],
-                                            text_font=("Arial", 20,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 20,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8,
                                             text_color="#2A2A9C",
@@ -2077,7 +2080,7 @@ def home():
                                             hover_color="blue",
                                             fg_color="#2A2A9C",
                                             corner_radius=8,
-                                            text_font=("Arial", 15,BOLD),
+                                            font=("Arial", 15,BOLD),
                                             command=submit_1
                                             )
     sub_button_1.place(x=950,y=153)
@@ -2088,7 +2091,7 @@ def home():
                                             hover_color="blue",
                                             fg_color="#2A2A9C",
                                             corner_radius=8,
-                                            text_font=("Arial", 15,BOLD),
+                                            font=("Arial", 15,BOLD),
                                             command=submit_2
                                             )
     sub_button_2.place(x=950,y=283)
@@ -2099,7 +2102,7 @@ def home():
                                             hover_color="blue",
                                             fg_color="#2A2A9C",
                                             corner_radius=8,
-                                            text_font=("Arial", 15,BOLD),
+                                            font=("Arial", 15,BOLD),
                                             command=submit_3
                                             )
     sub_button_3.place(x=950,y=413)
@@ -2111,7 +2114,7 @@ def home():
                                             hover_color="#F11F32",
                                             fg_color="#F12B3D",
                                             corner_radius=8,
-                                            text_font=("Arial", 15,BOLD),
+                                            font=("Arial", 15,BOLD),
                                             command=reset_1
                                             )
     reset_button_1.place(x=1150,y=153)
@@ -2122,7 +2125,7 @@ def home():
                                             hover_color="#F11F32",
                                             fg_color="#F12B3D",
                                             corner_radius=8,
-                                            text_font=("Arial", 15,BOLD),
+                                            font=("Arial", 15,BOLD),
                                             command=reset_2
                                             )
     reset_button_2.place(x=1150,y=283)
@@ -2133,7 +2136,7 @@ def home():
                                             hover_color="#F11F32",
                                             fg_color="#F12B3D",
                                             corner_radius=8,
-                                            text_font=("Arial", 15,BOLD),
+                                            font=("Arial", 15,BOLD),
                                             command=reset_3
                                             )
     reset_button_3.place(x=1150,y=413)
@@ -2142,7 +2145,7 @@ def home():
     schedule_frame = customtkinter.CTkFrame(master=app,
                                             width=900,
                                             height=230,
-                                            bg_color="white",
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=15)
     schedule_frame.place(x=10,y=500)
@@ -2151,8 +2154,8 @@ def home():
     num_label_1 = customtkinter.CTkLabel(master=schedule_frame,
                                             text="1. ",
                                             text_color="black",
-                                            text_font=("Arial", 15,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 15,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8)
     num_label_1.place(x=0,y=30)
@@ -2160,8 +2163,8 @@ def home():
     num_label_2 = customtkinter.CTkLabel(master=schedule_frame,
                                             text="2. ",
                                             text_color="black",
-                                            text_font=("Arial", 15,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 15,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8)
     num_label_2.place(x=0,y=90)
@@ -2169,8 +2172,8 @@ def home():
     num_label_3 = customtkinter.CTkLabel(master=schedule_frame,
                                             text="3. ",
                                             text_color="black", 
-                                            text_font=("Arial", 15,BOLD),
-                                            bg_color="white",
+                                            font=("Arial", 15,BOLD),
+                                            #bg_color="white",
                                             fg_color="white",
                                             corner_radius=8)
     num_label_3.place(x=0,y=150)
@@ -2179,8 +2182,8 @@ def home():
         schedule_label_1 = customtkinter.CTkLabel(master=schedule_frame,
                                                 text="SCHEDULED",
                                                 text_color="white",
-                                                text_font=("Arial", 15,BOLD),
-                                                bg_color="white",
+                                                font=("Arial", 15,BOLD),
+                                                #bg_color="white",
                                                 fg_color="red",
                                                 corner_radius=8)
         schedule_label_1.place(x=90,y=30)
@@ -2188,8 +2191,8 @@ def home():
         schedule_label_1 = customtkinter.CTkLabel(master=schedule_frame,
                                                 text="NON-SCHEDULED",
                                                 text_color="black",
-                                                text_font=("Arial", 15,BOLD),
-                                                bg_color="white",
+                                                font=("Arial", 15,BOLD),
+                                                #bg_color="white",
                                                 fg_color="red",
                                                 corner_radius=8)
         schedule_label_1.place(x=90,y=30)
@@ -2198,8 +2201,8 @@ def home():
         schedule_label_2 = customtkinter.CTkLabel(master=schedule_frame,
                                                 text="SCHEDULED",
                                                 text_color="white",
-                                                text_font=("Arial", 15,BOLD),
-                                                bg_color="white",
+                                                font=("Arial", 15,BOLD),
+                                                #bg_color="white",
                                                 fg_color="red",
                                                 corner_radius=8)
         schedule_label_2.place(x=90,y=90)
@@ -2207,8 +2210,8 @@ def home():
         schedule_label_2 = customtkinter.CTkLabel(master=schedule_frame,
                                                 text="NON-SCHEDULED",
                                                 text_color="black",
-                                                text_font=("Arial", 15,BOLD),
-                                                bg_color="white",
+                                                font=("Arial", 15,BOLD),
+                                                #bg_color="white",
                                                 fg_color="red",
                                                 corner_radius=8)
         schedule_label_2.place(x=90,y=90)
@@ -2218,8 +2221,8 @@ def home():
         schedule_label_3 = customtkinter.CTkLabel(master=schedule_frame,
                                                 text="SCHEDULED",
                                                 text_color="white",
-                                                text_font=("Arial", 15,BOLD),
-                                                bg_color="white",
+                                                font=("Arial", 15,BOLD),
+                                                #bg_color="white",
                                                 fg_color="red",
                                                 corner_radius=8)
         schedule_label_3.place(x=90,y=150)
@@ -2227,8 +2230,8 @@ def home():
         schedule_label_3 = customtkinter.CTkLabel(master=schedule_frame,
                                                 text="NON-SCHEDULED",
                                                 text_color="black",
-                                                text_font=("Arial", 15,BOLD),
-                                                bg_color="white",
+                                                font=("Arial", 15,BOLD),
+                                                #bg_color="white",
                                                 fg_color="red",
                                                 corner_radius=8)
         schedule_label_3.place(x=90,y=150)
@@ -2239,7 +2242,7 @@ def home():
                                         fg_color = "white",
                                         hover_color = "white",
                                         text_color = "white",
-                                        bg_color = "white",
+                                        #bg_color = "white",
                                         image = light_off,
                                         width = 10,
                                         height = 1)
@@ -2250,7 +2253,7 @@ def home():
                                         fg_color = "white",
                                         hover_color = "white",
                                         text_color = "white",
-                                        bg_color = "white",
+                                        #bg_color = "white",
                                         image = light_off,
                                         width = 10,
                                         height = 1)
@@ -2261,7 +2264,7 @@ def home():
                                         fg_color = "white",
                                         hover_color = "white",
                                         text_color = "white",
-                                        bg_color = "white",
+                                        ##bg_color = "white",
                                         image = light_off,
                                         width = 10,
                                         height = 1)
@@ -2284,7 +2287,7 @@ def home():
                                             hover_color="#3A3A3A",
                                             fg_color="red",
                                             corner_radius=8,
-                                            text_font=("Arial", 15,BOLD),
+                                            font=("Arial", 15,BOLD),
                                             command=quit)
     quit_button.place(x=1250,y=10)
     

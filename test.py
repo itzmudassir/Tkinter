@@ -1,33 +1,21 @@
-# importing whole module
-from tkinter import *
-from tkinter.ttk import *
+import customtkinter
+from PIL import ImageTk,Image
 
-# importing strftime function to
-# retrieve system's time
-from time import strftime
+# Appearence of the window
+customtkinter.set_appearance_mode("Light") #dark mode and light mood
+customtkinter.set_default_color_theme("blue")
 
-# creating tkinter window
-root = Tk()
-root.title('Clock')
+# Creating the window
+app=customtkinter.CTk()
+app.wm_attributes('-fullscreen','True')
+app.configure(bg="white")
 
-# This function is used to
-# display time on the label
+calender = ImageTk.PhotoImage(Image.open("Elements\calendar.png"))
+my_image = customtkinter.CTkImage(Image.open("Elements\calendar.png"),
+                                  
+                                  size=(40, 40))
 
-def time():
-	string = strftime('%H:%M:%S %p')
-	lbl.config(text=string)
-	lbl.after(1000, time)
+button = customtkinter.CTkButton(app, image=my_image)
+button.pack()
 
-
-# Styling the label widget so that clock
-# will look more attractive
-lbl = Label(root, font=('calibri', 40, 'bold'),
-			background='purple',
-			foreground='white')
-
-# Placing clock at the centre
-# of the tkinter window
-lbl.pack(anchor='center')
-time()
-
-mainloop()
+app.mainloop()
